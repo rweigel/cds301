@@ -1,0 +1,124 @@
+
+% Easy way to download file (Linux and OS-X usually have curl - the 
+% ! means "execute command line program".)
+% !curl http://solarscience.msfc.nasa.gov/greenwch/spot_num.txt > spot_num.txt
+
+% Before executing, save the file to the working directory and then
+% delete the header from the file using a text editor.
+clear;
+
+load spot_num_modified.txt
+d = spot_num_modified;  % Use a shorter name
+t = d(:,1)+d(:,2)/12;   % time is year + fraction of year.
+
+
+% Plot the Sunspot number only
+figure(1);
+% Clear any existing plots in this window.
+clf;
+% Plot all rows and the third column (The ":" means all rows)
+% Rarely should you use the default LineWidth (which is 1)
+plot(t,d(:,3),'r','LineWidth',3);
+% Put legend in different position because it overlaps with data
+%legend('Sunspot # Monthly Average','Location','NorthEast');
+% Remove legend background
+legend boxoff
+%xlabel('Date [Fractional Year]'); % Label seemed too complex.
+xlabel('Year')
+grid on;
+% Don't put title above axis since extra whitespace can be used.
+% title('From: http://solarscience.msfc.nasa.gov/greenwch/spot\_num.txt')
+text(1745,280,'Sunspot # Monthly Average [http://solarscience.msfc.nasa.gov/greenwch/spot\_num.txt]');
+
+% Set horizontal tick positions manually (after some trial-and-error
+% testing).
+set(gca,'XLim',[1740,2020])
+set(gca,'XTick',[1740:20:2020])
+
+% Set print-out aspect ratio (after trying a few settings and viewing the
+% resulting image).
+set(gcf,'paperunits','centimeters')
+set(gcf,'papersize',[21,7])
+set(gcf,'paperposition',[0,0,21,7])
+
+% Print vector version
+print -depsc spot_num_tseries.eps
+% Print raster version
+print -dpng spot_num_tseries.png
+
+% Perhaps the data will be more clear if fill is used.
+figure(2);
+clf;
+% Remove black border.  Figured out property "EdgeColor" by using
+% View->Propery Inspector and clicking on area.
+area(t,d(:,3),'EdgeColor','none');
+% Important: Use consistent labels on legends.
+%legend('Sunspot # Monthly Average');
+%xlabel('Date [Fractional Year]');
+xlabel('Year');
+grid on;
+text(1745,280,'Sunspot # Monthly Average [http://solarscience.msfc.nasa.gov/greenwch/spot\_num.txt]');
+
+% Use same limits as previous plot.
+% Set horizontal tick positions manually (after some trial-and-error
+% testing).
+set(gca,'XLim',[1740,2020])
+set(gca,'XTick',[1740:20:2020])
+
+% Set print-out aspect ratio (after trying a few settings and viewing the
+% resulting image).
+set(gcf,'paperunits','centimeters')
+set(gcf,'papersize',[21,7])
+set(gcf,'paperposition',[0,0,21,7])
+
+% Print vector version
+print -depsc spot_num_tseries_fill.eps
+% Print raster version
+print -dpng spot_num_tseries_fill.png
+
+% It seems that the standard deviation and sunspot number are correlated.
+% Plot one versus the other to see the relationship more clearly.
+
+figure(3);
+clf
+title('http://solarscience.msfc.nasa.gov/greenwch/spot\_num.txt')
+plot(d(:,3),d(:,4),'.','MarkerSize',10);
+grid on;hold on;
+% Determined by trial-and-error by plotting only green dots and determining
+% when they started deviating from fit line.
+b = 12*69; 
+plot(d(1:b,3),d(1:b,4),'g.','MarkerSize',10);
+
+legend('1749-1818 (fit values used?)','1819-2014 August (measured values)');
+xlabel('Sunspot # Monthly Average');
+ylabel('Sunspot # Monthly STD');
+axis square
+print -depsc spot_num_ssn_vs_std.eps
+print -dpng spot_num_ssn_vs_std.png
+
+% Quick exploration of apparent periodicity.
+% Many alternatives exist (periodogram, spiral plot, etc.)
+
+figure(4);
+ssn = d(:,3); % Extract SSN co
+ssnr = reshape(ssn(1:24*11*12),12*11,24);
+imagesc(ssnr);
+ch = colorbar;
+th = get(ch,'Title');
+set(th,'String','SSN')
+ylabel('Month in 11-year Cycle');
+xlabel('Cycle Number');
+
+figure(5)
+t = [1:24*11*12];
+x = sin(2*pi*t/(11*12));
+xr = reshape(x,11*12,24);
+imagesc(xr);
+ch = colorbar;
+th = get(ch,'Title');
+set(th,'String','A')
+
+title('A = sin(2\pi*t/(11*12)), t=[1:24*11*12]');
+ylabel('Month in 11-year Cycle')
+xlabel('Cycle Number');
+break
