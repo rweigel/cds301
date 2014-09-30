@@ -1,4 +1,3 @@
-
 % Easy way to download file (Linux and OS-X usually have curl - the 
 % ! means "execute command line program".)
 % !curl http://solarscience.msfc.nasa.gov/greenwch/spot_num.txt > spot_num.txt
