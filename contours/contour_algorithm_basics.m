@@ -1,14 +1,3 @@
-% Original Paper:
-% http://www.cc.gatech.edu/~bader/COURSES/GATECH/CSE6140-Fall2007/papers/LC87.pdf
-
-% MATLAB implementation
-% http://www.mathworks.com/help/matlab/creating_plots/the-contouring-algorithm.html
-
-% SO discussion
-% http://stackoverflow.com/questions/9330334/a-good-example-code-of-how-to-implement-marching-cubes
-
-% http://www.phyast.pitt.edu/~zov1/gnuplot/html/intro.html
-
 clear;
 x = [0:20:100];
 y = [0:20:100];
@@ -25,19 +14,23 @@ axis([-20 120 -20 120]); % Set axis wider than default
 hold on;
 for i = 1:length(x)
     for j = 1:length(y)
-        plot(x(i),y(j),'k.','MarkerSize',20);
-        text(2+x(i),2+y(j),num2str(z(i,j)));
-        
+        plot(x(i),y(j),'b.','MarkerSize',20);
+        text(2+x(i),2+y(j),['z=',num2str(z(i,j))],'Color','blue');
     end
 end
-axis square;
-xlabel('x');
-ylabel('y');
-title('Values of z=0.1[(x-50)^2+(y-50)^2]')
 
-%figure(2);clf;clc;
-%axis([-20 120 -20 120]);
-hold on;
+ylabel(gca, 'y','Rotation',0);
+xlabel(gca,'x');
+axis square
+set(gca,'XTick',[0:20:100])
+set(gca,'YTick',[0:20:100])
+grid on;
+
+text(25,114,'Values of z=0.1[(x-50)^2+(y-50)^2]')
+
+showlines = false;
+if (showlines)
+% Draw contour lines for z = 1.
 for i = 2:length(x)-1
     for j = 2:length(y)-1
         if (z(i,j) == 1)
@@ -46,34 +39,61 @@ for i = 2:length(x)-1
                 fprintf('   Left: z(%d,%d) = 1 (x=%d,y=%d)\n',i-1,j,x(i-1),y(j));
                 plot([x(i),x(i-1)],[y(j),y(j)]); % Draw line that connects.
             end
-            if (z(i+1,j) == 1) % Right
-                fprintf('   Right: z(%d,%d) = 1 (x=%d,y=%d)\n',i+1,j,x(i+1),y(j));
-            end
-            if (z(i,j+1) == 1) % Above
-                fprintf('   Above: z(%d,%d) = 1 (x=%d,y=%d)\n',i+1,j,x(i),y(j+1));
-            end
-            if (z(i,j-1) == 1) % Below
-                fprintf('   Below: z(%d,%d) = 1 (x=%d,y=%d)\n',i+1,j,x(i),y(j-1));
-            end    
         end
     end
 end
-axis square;
-xlabel('x');
-ylabel('y');
-title('Values of z=0.1[(x-50)^2+(y-50)^2]')
-break
+end
 
-figure(3);clf;
+% Add index axes.
+% Based on technique from http://stackoverflow.com/questions/19569134/overlaying-two-axes-in-a-matlab-plot
+% Create a new axes in the same position as the first one, overlaid on top
+h2 = axes('position', get(gca, 'position')); 
+% Put the new axes' y labels on the right, set the x limits the same as the
+% original axes', and make the background transparent
+set(h2, 'YAxisLocation', 'right', 'YLim',[0,length(y)+1],'Xlim', [0,length(x)+1], 'Color', 'none'); 
+ylabel(h2, 'j','Rotation',0);
+xlabel(h2, 'i');
+set(h2,'XTick',[1:length(x)])
+set(h2,'YTick',[1:length(y)])
+set(h2, 'XAxisLocation', 'top');
+axis square;
+hold on;
+
+
+if (showlines)
+    print -dpng contour_algorithm_basics_w_lines.png
+    print -depsc contour_algorithm_basics_w_lines.eps
+else
+    print -dpng contour_algorithm_basics.png
+    print -depsc contour_algorithm_basics.eps    
+end
+%!display contour_algorithm_basics.png &
+
+
+figure(2);clf;
 [c,h] = contour(x,y,z);
 clabel(c,h);
 xlabel('x');
-ylabel('y');
+ylabel('y','rotation',0);
 title('Countours of z=0.1[(x-50)^2+(y-50)^2]')
 grid on;
 axis square;
+hold on;
+axis square
+set(gca,'XTick',[0:20:100])
+set(gca,'YTick',[0:20:100])
+grid on;
 
-figure(4);clf;
+axis([-20 120 -20 120]); % Set axis wider than default
+
+for i = 1:length(x)
+    for j = 1:length(y)
+        plot(x(i),y(j),'b.','MarkerSize',20);
+        text(2+x(i),2+y(j),num2str(z(i,j)),'Color','Blue');
+    end
+end
+
+figure(3);clf;
 contourf(x,y,z);
 ch = colorbar;
 th = get(ch,'Title');
