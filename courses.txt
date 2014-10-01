@@ -1,0 +1,1119 @@
+
+http://dx.doi.org/10.1109/TVCG.2007.70415
+http://survey.timeviz.net/
+http://dx.doi.org/10.1109/INFVIS.2005.1532151
+
+Great list of links: http://cs.swan.ac.uk/~csbob/teaching/csM07-vis/
+
+http://dl.acm.org/dl.cfm
+
+http://ieeexplore.ieee.org/Xplore/guesthome.jsp
+
+Courses Related to Scientific Visualization
+
+= Visualization for Scientists =
+
+== URL ==
+
+http://bobweigel.net/cds301
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+The techniques and software used to visualize scientific simulations, complex information, and data visualization for knowledge discovery. Includes examples and exercises to help students develop their understanding of the role visualization plays in computational science and provides a foundation for applications in their careers.
+
+== Objectives ==
+
+After taking this course,
+
+* You will have the ability to critically analyze and suggest improvements for existing scientific visualizations;
+* You will have the ability to create visualizations that give insight into scientific data;
+* You will have the ability to use visualization to discover features in scientific data;
+* You will have experience with at least three scientific visualization packages and have the ability to quickly learn how to use new packages;
+* You will have an understanding of several fundamental computational algorithms used in creating scientific visualizations; and
+* You will have the ability to preprocess and read scientific data in many formats.
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Scientific Data Visualization =
+
+== URL ==
+
+http://www.cs.sjtu.edu.cn/~shengbin/course/datavis/#home
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+<em>Scientific Data Visualization</em> is an important research area in the field of computer science. It mainly researches how to transform the scientific data, including the computation and measurement data, the images transmitted from satellites, and the images from CT and MRI devices, into the messages which can be viewed intuitively and is helpful to understand. The techniques of scientific data visualization have wide-spread applications in molecular modeling, medicine imaging, geoscience, space exploration, computational fluid dynamics, finite element analysis, etc. Students is required to learn the research background of scientific data visualization and to skill in the basic concepts and core algorithms in visualization. The main contents include the algorithms of contour extraction in 2D scalar fields, surface reconstruction between planar cross sections, isosurface generation and rendering, and volume rendering. After learning the course, students can master in the previous algorithms, their implementation and application ability of scientific data visualization systems.
+
+== Objectives ==
+
+(From URL) P.S.: I hope this course can provide a fundamental background for your research work. So take this course for the intellectual and academic interest.
+
+(From Course Description) After learning the course, students can master in the previous algorithms, their implementation and application ability of scientific data visualization systems.
+
+== Textbook == 
+
+*《科学计算可视化-算法与系统》. 石教英，蔡文立. 科学出版社。1996年9月.
+* Data Visualization–Principles &amp; Practice, Alexandru C. Telea, A K Peters, 2008
+* Handbook of Data Visualization
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Data Visualization =
+
+== URL ==
+
+http://people.cs.clemson.edu/~levinej/courses/S13/881/syllabus.pdf
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+This course introduces material on the theory and practice of designing effective visualizations of data from numerous sources. In particular, we will focus on a broad overviewto the field, covering principles, methods, and techniques that are foundational to both informationand scientific visualization. Experience will be gained in using cutting-edge data analysis tools, aswell as in developing new visualization techniques using a variety of languages and toolkits.Data visualization is a field of growing importance that combines background expertise incomputer graphics, scientific computing, data mining, and image processing. It couples these fieldswith artistic, psychological, perceptual, and interactivity concerns. The techniques learned in thisclass are broadly applicable to all fields in engineering and science, where the explosion of data weare now able to generate demands effective presentation and analysis.
+
+Students will read and discuss relevant texts and research papers, as well as be evaluated using a series of programming projects involving cutting-edge data visualization libraries.
+
+== Objectives ==
+
+This course will provide a thorough grounding in the state of the art data visualization. It is designed to prepare students to:
+* understand the role of visualization in the processing and analysis of data coming from a
+broad range of sources;
+* develop software and tools to create visualizations of data that are effective for analysis;
+* be familiar with  the cutting edge research ideas in the field of visualization; and
+* undertake creative work and perform research involving visualization topics.
+
+== Topics ==
+
+Visualization Fundamentals
+* Design principles
+* The Process of Visualization
+* Data Abstraction
+* Visual Encodings
+* Use of Color
+* Perceptual Issues
+* Designing Views
+* Interacting with Visualizations
+* Filtering and Aggregation
+* Design Studies
+
+Information / Non-Spatial Data Visualization
+* Tabular Data
+* Tree Data
+* Graph Data
+* Text Data
+* Flow Data
+* Time-Series Data
+* Topological Visualization
+* Uncertainty
+
+Scientific / Spatial Data Visualization
+* Scalar Volumes
+* Isosurfacing
+* Volume Rendering
+* Transfer Function Design
+* Vector Fields
+* Tensor Fields
+* Maps
+
+== Textbook ==
+
+Required Text and Handout Materials
+
+* Fry, Visualizing Data. O’Reilly Media, 2008, ISBN 0596514557.
+* Schroeder, Martin, and Lorensen, Visualization Toolkit: An Object-Oriented Approach to
+3D Graphics, 4th Edition. Kitware, 2006, ISBN 193093419X.
+* Munzner, Visualization Design and Analysis: Abstractions, Principles, and Methods (Preprint).
+* Many other handout materials linked to on the course schedule page.
+
+== References ==
+
+Additional Reference Reading Material
+* Tufte, Envisioning Information. Graphics Press, 1990, ISBN 0961392118.
+* Tufte, The Visual Display of Quantitative Information, 2nd ed. Graphics Press, 2001, ISBN
+0961392142.
+* Hansen and Johnson, Visualization Handbook. Academic Press, 2004, ISBN 012387582X.
+CP SC 881, Data Visualization, Joshua A. Levine (1 of 4)* Ware, Information Visualization: Perception for Design, 3rd ed. Morgan Kaufmann, 2012,
+ISBN 0123814642.
+* Shiffman, Learning Processing: A Beginner’s Guide to Programming Images, Animation, and
+Interaction. Morgan Kaufmann, 2008, ISBN 0123736021.
+* Telea, Data Visualization: Principles and Practice. A. K. Peters, Ltd, 2007, ISBN 1568813066.
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+== Homework Problems ==
+
+= Scientific Visualization =
+
+== URL ==
+
+http://cg.cs.uni-bonn.de/en/teaching/ss-2011/lecture-scientific-visualization/
+
+== Audience/Pre-requisites ==
+
+B-IT Master Media Informatics, Bachelor
+
+== Description ==
+
+Scientific Visualization deals with all aspects that are connected with the visual representation of (huge) data sets from scientific experiments or simulations in order to achieve a deeper understanding or a simpler represenation of complex phenomena.
+
+This lecture introduces the main concepts of scientific visualization. Based on the visualization pipeline and the classification of mapping methodes, visualization algorithms and data structures for various kinds of applications and scenarios will be presented. Among the topics of this lecture are: usage of color in scientific visualization, huge geometric models (such as terrain models, finite element models from car industry), cartesian 3D scalar fields (such as medical CT-data), unstructured 3D vector fields (e.g., from computational fluid dynamics), tensor fields and information visualization (such as tables or graphs). By solving programming exercises the students will gain practical experience in visualisation.
+
+== Objectives ==
+
+== Topics ==
+
+(Based on HW titles and Lecture topics):
+
+* Triangulation and Interpolation
+* Fourier Transform and Filtering
+* Basic Mapping Techniques
+* Volume Visualization
+* Volume Visualization
+* Vector Field Visualization
+* Height Fields and Isolines
+* Glyphs and Parallel Coordinates
+* Principal Component Analysis
+* Line Integral Convolution
+* Particle Tracing
+
+== Textbook ==
+
+Literature
+
+Alexandru C. Telea: Data Visualization - Principles and Practice, AK Peters, 2008 (available at the computer science library)
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Data Visualization =
+
+== URL ==
+
+http://www.cs.swan.ac.uk/~csbob/teaching/csM07-vis/laramee11syllabus.pdf
+
+== Audience/Pre-requisites ==
+
+Prerequisites: CS 217 Computer Graphics I: Image Processing and Synthesis
+
+Recommended Co-Requisite: CS 307 Computer Graphics II: Modelling and Rendering
+
+== Description ==
+
+== Objectives ==
+
+From http://www.swansea.ac.uk/media/COMPSCI%20Modules%202012-2013.pdf
+
+Synopsis
+
+Data Visualization is concerned with the automatic or semi-automatic generation of digital images that depict data in a meaningful way(s). It is a relatively new field of computer science that is rapidly evolving and expanding. It is also very application oriented, i.e., real tools are built in order to help scientists from other disciplines.
+
+Syllabus
+
+We will start off by introducing the fundamentals of visualization. Introductory topics include purposesand goals of visualization, applications, challenges, the visualization pipeline, sources of data, datadimensionality, data types, and grid types. The next sub-topic examines information visualization, thatis, visual representations of abstract data. Information visualization topics include hierarchical data,tree maps, cone trees, focus and context techniques, graphs and graph layouts, multi-dimensionaldata, scatter plots, scatter plot matrices, icons, parallel coordinates, interaction techniques, linkingand brushing. The second major sub-topic is the study of volumetric data. Volume visualization topicsinclude slicing, surface vs. volume rendering, transfer functions, interpolation schemes, direct volumevisualization, ray casting, image order vs. object order algorithms, gradients filtering, interpolation, andisosurfacing. The third major sub-topic is vector field visualization. Topics include simulation, measured,and analytical data, steady and time-dependent (unsteady) flow, direct and indirect flow visualization,applications, hedge hog plots, vector glyphs, numerical integration schemes, streamlines, streamlineplacement, geometric flow visualization techniques, texture-based techniques, and feature-based flowvisualization.
+
+Learning Outcomes
+
+Students will gain competence in the field of data visualization. They will understand the basic methodsavailable for the computer-aided depiction of data from several inter-disciplinary and application orientedsources. They will also gain and understanding of the visualization problems that have been solved aswell as the challenges that remain.
+
+Transferable Skills
+
+The ability to identify and generate advanced visualizations of data, comparative analysis, the abilityto identify sources of data and the challenges when visualizing data as well as the challenges thatscientists and practitioners from other disciplines face.
+
+== Topics ==
+
+Introductory Topics Include: purposes and goals of visualization, applications, challenges, sources of data: measurement, simulation, modeling, data dimensionality: 1D, 2D, 2.5D, 3D, time-dependent, data types: scalar, vector, nominal, multi-variate, grid types: regular, rectilinear, curvilinear, unstructured, hybrid, point-based or scattered data Information Visualization Topics Include: abstract data, hierarchical data, conventional infor- mation visualization techniques, tree maps, cone trees, InfoCube, focus and context techniques, bifocal lens, perspective wall, table lens, fisheye views, hyperbolic trees graphs and graph layouts, multi-dimensional data, scatter plots, scatter plot matrices, icons, paral- lel coordinates, interaction techniques, linking and brushing, magic lenses, tool glasses Volume Visualization Topics Include: slicing, MPI (multi-planar reconstruction), surface vs. volume rendering, transfer functions: compositing, MPI (maximum intensity projection), first-hit, average (x-ray), scalar data, sources of volume data, challenges, voxels vs. cells, interpolation schemes, direct volume visualization: ray casting, shear-warp factorization, splatting, 3D texture mapping, surface fitting methods: marching cubes, marching tetrahedra, image order vs. object
+
+== Textbook ==
+
+Recommended Reference Books:
+
+# Interactive Data Visualization: Foundations, Techniques, and Applications by M. Ward,
+G. Grinstein, and D. Keim, published by A.K. Peters, 2010.
+# Data Visualization: Principles and Practice by A. Telea, published by A.K. Peters, 2008.
+
+Other Good Books:
+
+# Information Visualization: Design for Interaction, Second Edition by Robert Spence,
+(hardcover: 282 pages), published by Prentice Hall, 2007, ISBN: 0-132-0655-09
+# The Visualization Toolkit, Third Edition by William Schroeder, Ken Martin, and Bill
+Lorensen, (504 pages), published by Kitware Inc., 3rd edition, August 2004, ISBN: 1930934122
+# (Chapters From the) Visualization Handbook by Charles D. Hansen and Chris R. John-
+son (984 pages), published by Academic Press; 1 edition, June 2004, ISBN: 012387582X
+== References ==
+
+Important Research Papers:
+
+1. Marching Cubes: A High Resolution 3D Surface Construction Algorithm by William Lorensen and H. Cline in Proceedings of ACM SIGGRAPH ’87 (Computer Graphics, Vol. 21, No. 4, July. 1987)
+2. Display of Surfaces from Volume Data by Marc Levoy in IEEE Computer Graphics & Applications, Vol. 8, No. 3, June 1988
+3. Fast Volume Rendering Using a Shear-Warp Factorization of the Viewing Transformation by Philippe Lacroute and Marc Levoy in Proceedings of ACM SIGGRAPH ’94 (Computer Graphics, Vol. 28, No. 4, July. 1994)
+4. Creating Evenly Spaced Streamlines of Arbitrary Density by Bruno Jobard and Wilfred Lefer in Proceedings of the 8th Eurographics Workshop on Visualization in Scientific Computing, April 1997, pages 45-55
+5. Imaging Vector Fields Using Line Integral Convolution by B. Cabral and L. Leedom in Proceedings of ACM SIGGRAPH ’93 (Computer Graphics, Vol. 27, No. 4, July. 1993), pages 263-270
+6. The State of the Art in Flow Visualization: Dense and Texture-Based Techniques by Robert S. Laramee, Helwig Hauser, Helmut Doleisch, Benjamin Vrolijk, Frits H. Post, and Daniel Weiskopf in Computer Graphics Forum, Vol. 23, No. 2, 2004, pages 203-221
+7. The Eyes Have It: A Task by Data Type Taxonomy for Information Visualization by Ben Shneiderman in Proceedings of Visual Languages, September 1996, pages 336-343
+
+== Links ==
+
+http://cs.swan.ac.uk/~csbob/teaching/csM07-vis/
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+
+= Title =
+
+== URL ==
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Visual Analytics =
+
+== URL ==
+
+http://www.cs.ox.ac.uk/teaching/courses/visual/
+
+== Audience/Pre-requisites ==
+
+Students taking this course should have acquired essential knowledge of computer science including basic concepts in discrete mathematics, probability, and algorithm complexity. Students are also expected to be competent in programming, and if required, have the ability to learn a simple programming language (e.g., JavaScript) quickly.
+
+== Description ==
+
+Overview
+
+Computer-supported data visualization (commonly referred to as Visualization for short) is a study of transformation from data to visual representations in order to facilitate effective and efficient cognitive processes in performing tasks involving data. Visual analytics is an advanced form of visualization, in which a visualization process features a significant amount of computational analysis and human-computer interaction. Since the term was coined in 2004, visual analytics has become a de facto standard approach to the development of a practical computer-support system for understanding complex and large scale data.
+
+This course introduces students to the fundamentals of visualization as a scholarly subject. It presents major concepts in visualization design and methods for algorithmic development, in conjunction with a close examination of several important data analysis and visualization techniques. It provides students with opportunities to explore the latest research topics in visual analytics.
+
+Synopsis
+
+This course covers a broad range of topics in visualization (at different levels of detail). Students will be exposed to a variety of visual representations, including basic statistical graphics; popular representations such as tag clouds, treemaps and parallel coordinates; pixel-, glyph-, graph- and map-based representations; visual representations of scalar, vector and tensor fields; and visual representations of temporal or spatiotemporal data.
+
+In particular, students will study the methodology of formulating a visual analytics pipeline by combining interactive visualization with analytical techniques (e.g., filtering, clustering, and  dimensionality reduction), and will gain an understanding of the fundamental concept that interactive visualization helps break the conditions of data processing inequality, which is a constraint typically imposed on most automated analytical processes.
+
+The course will help students to answer questions such as:
+
+* What is visualization really for?
+* What are the relative merits and limitations of some important techniques in visual analytics?
+* What are the theoretical and technical challenges to be addressed?
+
+== Objectives ==
+
+Learning outcomes
+
+Students satisfying the prerequisites are expected to:
+
+* understand the purpose of visualization in general and visual analytics in particular;
+* be conversant with a collection of visualization and analysis techniques;
+* gain confidence and competence in performing data analysis and visualization tasks;
+* appreciate the uses and importance of visualization in data-intensive applications;
+* appreciate the fundamental role of perception and cognition in visual analytics; and
+* engage in discussions on the latest theoretical research topics.
+
+== Topics ==
+
+* "Hello, visualization." main concepts, subject overview, and hand-on experience.
+* Visualization from different perspectives (a) data-centric view, (b) task-centric view, (c) domain-centric view, and (d) information theoretic view.
+* Technical case study 1: Parallel coordinates visualization.
+* Technical case study 2: Trees and graphs.
+* Visual mappings and perceptual considerations.
+* Technical case study 3: Volume visualization.
+* Technical case study 4: Video visualization.
+* Filters, algorithms and information-assisted visualization.
+* Technical case study 5: Classification and clustering.
+* Technical case study 6: Dimensionality reduction.
+* Visual analytics pipelines.
+* Advanced topics: (a) visualization taxonomy, (b) theory of visualization, (c) quality of visualization, and (d) knowledge-assisted visualization.
+
+== Textbook ==
+
+Course Texts
+
+* Matthew Ward, Georges Grinstein, and Daniel Keim. Interactive Data Visualization: Foundations, Techniques, and Applications, AK Peters, 2010.
+* Alexandru C. Telea, Data Visualization: Principles and Practice, AK Peters, 2008.
+* Pang-Ning Tan, Michael Steinbach and Vipin Kumar, Introduction to Data Mining, Pearson, 2014.
+
+== References ==
+
+Further Readings
+* Colin Ware, Information Visualization: Perception for Design, Morgan Kaufman, 2004.
+* Robert Spence, Information Visualization: Design for Interaction, 2nd Ed., Prentice Hall, 2006.
+* James J. Thomas and Kristin A. Cook (eds.), Illuminating the Path: The Research and Development Agenda for Visual Analytics. IEEE Computer Society, 2005. PDF Online.
+* Mike Dewar, Getting Started with D3, O'Reilly Media, 2012.
+* Stéphane Tufféry, Data Mining and Statistics for Decision Making, Wiley, 2011.
+
+Other General References
+* Charles Hansen and Christopher Johnson, The Visualization Handbook, Academic Press, 2005.
+* Stuart K. Card, Jock D. Mackinlay, and Ben Shneiderman, Readings in Information Visualization: Using Vision to Think, Morgan Kaufmann, 1999.
+* Jacques Bertin, Semiology of Graphics, Esri Press, 1983.
+* Jeffrey Heer, Michael Bostock, and Vadim Ogievetsky, “A Tour through the Visualization Zoo”, Communications of the ACM, 53(6):59-67, 2010. PDF Online.
+* Tableau Software (Pat Hanrahan, Chris Stolte, Jock Mackinlay), Visual Analysis for Everyone: Understanding Data Exploration and Visualization, 2007. PDF Online.
+* William Schroeder, Ken Martin, Bill Lorensen, The Visualization Toolkit: An Object-Oriented Approach to 3D Graphics, 2nd Ed., 1997.
+* Edward R. Tufte, The Visual Display of Quantitative Information, 2nd Ed., Graphics Press, 2001.
+* Stephen Few, Now You See It, Analytics Press, 2009.
+* Morris H. DeGroot, Mark J. Schervish, Probability and Statistics, Pearson, 2011.
+
+== Lecture Notes ==
+
+N/A
+
+== Problems ==
+
+N/A
+
+== Projects ==
+
+N/A
+
+== Software ==
+
+N/A
+
+= Visualization =
+
+== URL ==
+
+http://www.csc.kth.se/utbildning/kth/kurser/DD2257/visual12/
+
+http://www.csc.kth.se/utbildning/kth/kurser/DD2257/visual12/Vis-120320.pdf
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+Telea, Data visualization: Principles and Practice, AK Peters, 2008.
+
+== References ==
+
+# W. J. Schroeder, L. S. Avila and W. Hoffman, Visualizing with VTK: A Tutorial, Computer Graphics and Applications, September/October 2000:20-27 (PDF)
+# H. Fuchs, M. Kedem, et al, Optimal Surface Reconstruction from Planar Contours , Comunications of the ACM 20(10):693-702, October 1977 
+# W. E. Lorensen and H. E. Cline, Marching Cubes: A High Resolution 3D Surface Construction Algorithm, Computer Graphics, 21(4):163-169, July 1987
+# C. Montani, R. Scateni and R. Scopigno, A modified look-up table for implicit disambiguation of Marching Cubes, The Visual Computer, 10:353-355, 1994
+# A. E. Kaufman, Volume Visualization: Principles and Advances, Course notes SIGGRAPH 98
+# M. Levoy, Display of Surfaces from Volume Data, Computer Graphics and Applications, May 1988:29-37
+# H. Fogelberg, Transparency projections, Chap. 2 in Experiments with Fourier Volume Rendering, Lic. Thesis, Linköping Studies in Science and Technology, Thesis No. 635, 1995
+# H. Pfister et al, The Volume Pro Real-Time Ray-Casting System, Proc SIGGRAPH 99
+# Cabral, Imaging Vector Fields Using Line Integration Convolution, ACM SIGGRAPH93
+# Nelson Max, Optical Models for Direct Volume Rendering, IEEE TRANSACTIONS ON VISUALIZATION AND COMPUTER GRAPHICS, VOL. 1, NO. 2, JUNE 1995
+
+== Lecture Notes ==
+
+Yes.
+
+== Problems ==
+
+== Projects ==
+
+Yes, including student project presentations.
+
+== Software ==
+
+= Introduction To Visualization =
+
+== URL ==
+
+http://www3.ece.neu.edu/~yunfu/course/Syllabus-CSE456-556-Fall2010.pdf
+
+== Audience/Pre-requisites ==
+
+CSE 456/556 Introduction to Visualization
+
+== Description ==
+Introduction to relevant topics and concepts in visualization, including computer graphics, visual data representation, physical and human vision models, numerical representation of knowledge and concept, animation techniques, pattern analysis, and computational methods. Tools and techniques for practical visualization. Elements of related fields including computer graphics, human perception, computer vision, imaging science, multimedia, human-computer interaction, computational science, and information theory. Covers examples from a variety of scientific, medical, interactive multimedia, and artistic applications. Hands-on exercises and projects.
+
+== Objectives ==
+
+== Topics ==
+
+* Data Representation
+* Image Model and Human Vision System
+* Visual Perception
+* Visual Cognition
+* Visualization Design
+* Color
+* Visualization Tools
+* Dimensionality Reduction(
+* Table and Graph
+* Trees and Networks
+* Interactive Visualization
+* Image-based Rendering
+* Face Image Computing
+* Google Earth and GIS
+* Medical Visualization
+* Artistic Visualization
+* Social Visualization
+
+== Textbook ==
+
+== References ==
+# The Visual Display of Quantitative Information (2nd edition), Edward Tufte, Graphics Press, ISBN 0961392142.
+# Visualizing Data, Ben Fry, O'Reilly (2007), ISBN: 0596514557.
+# Show Me the Numbers, by Stephen Few, Analytics Press, ISBN: 0970601999.
+# Data Visualization (principles and practice), Alexandru C. Telea., A K Peters, Ltd.
+# Information Visualization (perception for design) (2nd Edition), Colin Ware, Elsevier Press.
+
+== Links ==
+
+http://www.csc.kth.se/utbildning/kth/kurser/DD2257/visual12/Vis-120320.pdf
+
+http://dl.acm.org/dl.cfm
+
+http://ieeexplore.ieee.org/Xplore/guesthome.jsp
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Introduction to Data Visualization =
+
+== URL ==
+
+http://www.zib.de/hotz/teaching/pastTeachingWS0910.html
+
+== Audience/Pre-requisites ==
+
+Interest in computer graphics and visualization. 
+
+Computer science and mathematic students.
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+* Scalar Fields
+* Volume Rendering
+* Scalar Field Topology
+* Vector Fields
+* Image-based methods
+* Feature-based visualization
+* Information visualization
+* Scatterplots, histograms, tables, and trees
+* Domain modeling techniques
+* Surface reconstruction
+* Grid simplification
+
+== Textbook ==
+
+== References ==
+
+# Data Visualization - Principles and Practice. Alexandru C. Telea. AK Peters; 1st edition. 2008
+# Visualisierung: Grundlagen und allgemeine Methoden. Heidrun Schumann, Wolfgang Müller. Springer Berlin; 1. Auflage. 1999.
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Information Visualisation =
+
+== URL ==
+
+http://courses.iicm.tugraz.at/ivis/
+
+
+
+== Audience/Pre-requisites ==
+
+== Description ==
+1. Introduction
+2. History of Information Visualisation
+3. Visual Perception
+4. Visualising Linear Structures
+5. Visualising Hierarchies
+6. Visualising Networks and Graphs
+7. Visualising Multidimensional Metadata
+8. Visualising Text and Object Collections
+9. Visualising Query Spaces
+10. Tools and Toolkits
+11. Open Data Vis and Data Journalism
+
+== Objectives ==
+
+First we will look at current work and results in the area of information visualisation. Then students will resarch and present one particular aspect of information visualisation. Finally, students will design their own visualisation for a particular kind of information or application.
+
+== Topics ==
+
+== Textbook ==
+
+If you would like to buy one or two books for the course, I recommend the following:
+
+* Ward et. al., Interactive Data Visualization
+* Ware, Information Visualization
+* Spence, Information Visualization
+* Yau, Visualize This
+
+== References ==
+
+Books
+
+* Ward, Grinstein, and Keim; Interactive Data Visualization: Foundations, Techniques, and Applica-
+tions; A. K. Peters, Jul 2010. ISBN 1568814739 (com, uk) [Ward, Grinstein and Keim, 2010]
+* Colin Ware; Information Visualization: Perception for Design; 3rd Edition, Morgan Kaufmann,
+Jun 2012. ISBN 0123814642 (com, uk) [Ware, 2012]
+*  Bob Spence; Information Visualization: Design for Interaction; Prentice Hall, 2nd Edition, 2006.
+ISBN 0132065509 (com, uk) [Spence, 2006]
+*  Card, MacKinlay, Shneiderman; Readings in Information Visualization : Using Vision to Think;
+Morgan Kaufman, 1999. ISBN 1558605339 (com, uk) [S. K. Card, J. D. Mackinlay and Shneiderman,
+1999]
+*  Stephen Few; Information Dashboard Design; O’Reilly, 01 Jan 2006.
+[Few, 2006] 2nd Ed is coming Aug 2013 [Few, 2013]
+ISBN 0596100167 (com, uk)
+*  Nathan Yau; Visualize This: The FlowingData Guide to Design, Visualization, and Statistics; Wiley,
+Jul 2011. ISBN 0470944889 (com, uk) [Yau, 2011]
+*  Noah Iliinsky and Julie Steele; Designing Data Visualizations; O’Reilly, Sept 2011.
+1449312284 (com, uk) [Iliinsky and Steele, 2011]
+ISBN
+* Jin-Ting Zhang; Visualization for Information Retrieval; Springer, Nov 2007. ISBN 3540751475 (com,
+uk) [J.-T. Zhang, 2007]
+* Riccardo Mazza; Introduction to Information Visualization; Springer, March 2009. ISBN 1848002181
+(com, uk) [Mazza, 2009]
+* James J. Thomas and Kristin A. Cook; Illuminating the Path: The Research and Development
+Agenda for Visual Analytics; 184-page report, August 2005. http://nvac.pnl.gov/agenda.stm
+ISBN 0769523234 (com, uk)
+* Chaomei Chen; Information Visualisation and Virtual Environments; Springer, 1999.
+1852331364 (com, uk) [Chen, 1999]
+ISBN
+* Chaomei Chen; Information Visualization: Beyond the Horizon; 2nd Edition, Springer, May 2006.
+ISBN 184628340X (com, uk)
+* Vladimir Geroimenko and Chaomei Chen; Visualizing the Semantic Web, 2nd Edition; Springer,
+2005. ISBN 1852339764 (com, uk) [Geroimenko and Chen, 2005]
+* Fayyad et al; Information Visualization in Data Mining and Knowledge Discovery; Morgan
+Kaufmann, 2001. ISBN 1558606890 (com, uk) [Usama Fayyad, 2001]
+* Jacques Bertin; Semiology of Graphics; ESRI Press, 2010. ISBN 1589482611 (com, uk) [Bertin, 2010]
+[Reprint]
+* Jacques Bertin; Sémiologie graphique; Editions de l’Ecole des Hautes Etudes en Sciences, 1999.
+ISBN 2713212774 (com, uk) [Bertin, 1999] [In French]
+
+* Robert Harris; Information Graphics; Oxford University Press, 2000.
+[Harris, 2000] ISBN 0195135326 (com, uk)
+• Richard Saul Wurman; Information Architects; Watson-Guptill, 1997.
+[Wurman, 1997] ISBN 1888001380 (com, uk)
+* Edward Tufte; Visual Explanations; Graphics Press, 1997. ISBN 0961392126 (com, uk) [Tufte, 1997a]
+* Edward Tufte; The Visual Display of Quantitative Information; Graphics Press, 1992.
+096139210X (com, uk) [Tufte, 1991]
+* Edward Tufte; Envisioning Information; Graphics Press, 1990.
+1990]
+ISBN 0961392118 (com, uk)
+ISBN
+[Tufte,
+* Alexandru Telea; Data Visualization; A. K. Peters, 2007. ISBN 1568813066 (com, uk) [Telea, 2007]
+* Alberto Del Bimbo; Visual Information Retrieval; Morgan Kaufmann, 1999. ISBN 1558606246 (com, uk) [del Bimbo, 1999]
+* Jorg Blasius and Michael Greenacre; Visualization of Categorical Data; Academic Press, 1998. ISBN 0122990455 (com, uk) [Blasius and Greenacre, 1998]
+* Teuvo Kohonen, T. S. Huang, and M. R. Schroeder; Self-Organizing Maps; 3rd Edition, Springer,
+2000. ISBN 3540679219 (com, uk) [Kohonen, 2000]
+* Okabe et al; Spatial Tessellations; 2nd Edition, Wiley, 2000.
+et al., 2000]
+ISBN 0471986356 (com, uk)
+[Okabe
+* Martin Dodge and Rob Kitchin; Mapping Cyberspace; Routledge, 2000. ISBN 0415198844 (com, uk)
+[Dodge and Kitchin, 2000]
+* Kevin Lynch; The Image of the City; MIT Press, 1960. ISBN 0262620014 (com, uk) [Lynch, 1960]
+* Richard Gregory; Eye and Brain; 5th Edition, Princeton University Press, 1997. ISBN 0691048371
+(com, uk) [Gregory, 1997]
+* Brian Wandell; Foundations of Vision; Sinauer Associates, 1995. ISBN 0878938532 (com, uk) [Wan-
+dell, 1995]
+* Bruce, Green, and Georgeson; Visual Perception; 4th Edition, Psychology Press, 2003.
+1841692379 (com, uk) [Bruce, Green and Georgeson, 2003]
+
+Articles
+* Herman et al; Graph Visualisation and Navigation in Information Visualisation: A Survey; IEEE
+TVCG, Vol. 6, No. 1, Jan.-Mar. 2000. [Herman, Melancon and Marshall, 2000]
+* Ben Shneiderman; The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations;
+Proc. 1996 IEEE Symposium on Visual Languages (VL’96). [Shneiderman, 1996] or [Shneiderman
+and Plaisant, 2009, Chapter 14]
+* Gershon, Eick, Card; Information Visualization; ACM interactions, March/April 1998. [Gershon,
+Eick and S. Card, 1998]
+* Nahum Gershon and Steve Eick; Visualization’s New Tack: Making Sense of Information; IEEE
+Spectrum, Nov. 1995. [Gershon and Eick, 1995]
+
+Online Resources
+* InfoVis Wiki; infovis-wiki.net
+* Robert Kosara; EagerEyes; eagereyes.org
+* Andy Kirk; VisualisingData; visualisingdata.com
+* Manuel Lima; Visual Complexity; visualcomplexity.com
+* Riccardo Mazza; Wikiviz; wikiviz.org
+* Visual Analytics Digital Library; http://vadl.cc.gatech.edu/
+* Manuel Lima; visualcomplexity; http://www.visualcomplexity.com/vc/
+* Michael Friendly; Gallery of Data Visualization; http://www.math.yorku.ca/SCS/Gallery/
+* Andrew Vande Moere; Information Aesthetics; http://infosthetics.com/
+* IBM; Many Eyes; http://many-eyes.com/
+* Gary Ng; Information Visualization Resources; May 2002. http://www.cs.man.ac.uk/~ngg/
+InfoViz/
+* Martin Dodge; Cyber-Geography Research April 2002. http://www.cybergeography.org/
+* Michael Reed and Dan Heller; OLIVE: On-line Library of Information Visualization Environments;
+University of Maryland, Nov. 1997. http://www.otal.umd.edu/Olive/
+* Peter Young; Three Dimensional Information Visualisation; University of Durham, Nov. 1996. http://vrg.dur.ac.uk/misc/PeterYoung/pages/work/documents/lit-survey/IV-Survey/
+
+* IEEE Symposium on Information Visualization (InfoVis). Since 1995. The main conference in
+the field, quite low acceptance rate (23% in 2006), very focussed, high quality papers, single-track.
+ieeevis.org Proceedings published with IEEE: http://conferences.computer.org/infovis/
+* Eurographics/IEEE Symposium on Visualization (EuroVis). Formerly VisSym. Fairly high quality.
+eurovis.org/ Proceedings published with Eurographics: http://www.eg.org/EG/DL/WS/VisSym
+* International Conference on Information Visualisation (IV). Since 1997, usually in London. Broad
+in scope, fairly high acceptance rate (57% in 2007), papers of mixed quality, multi-track. http:
+//www.graphicslink.co.uk/IV2013/ Proceedings published with IEEE: http://ieeexplore.
+ieee.org/servlet/opac?punumber=1000370
+* See Conference, Germany. see-conference.org/
+* Some papers at CHI, AVI, UIST.
+* Visual Analytics and Information Visualisation track at I-Know conference in Graz, Austria. i-know.at
+
+InfoVis Companies
+
+Suppliers of infovis toolkits and components:
+* Inxight inxight.com (Inxight was bought by BusinessObjects in May 2007, BusinessObjects was
+bought by SAP in Oct 2007).
+* Spotfire spotfire.com (Spotfire was bought by Tibco in May 2007).
+* Tableau tableausoftware.com
+* The Hive Group hivegroup.com
+* Panopticon panopticon.com
+* macrofocus macrofocus.com
+* Maya Viz mayaviz.com (Maya Viz was bought by General Dynamics in Apr 2005).
+* OmniViz omniviz.com (OmniViz was bought by BioWisdom in Feb 2007, BioWisdom was bought
+by Instem in Mar 2011).
+* AVS avs.com
+* NComVA ncomva.com
+* Visual Insights visualinsights.com (Visual Insights was renamed Advizor Solutions in 2003).
+* magnaview magnaview.com
+* Oculus Info oculusinfo.com
+* Tom Sawyer Software tomsawyer.com
+* ILOG ilog.com (ILOG was bought by IBM in Jan 2009).
+
+Video: Stephen Few
+* Stephen Few; Now You See It; 58-minute video [Few, 2008] [14:12–27:00]
+
+== Lecture Notes ==
+
+Excellent overview of visualization methods
+
+http://courses.iicm.tugraz.at/ivis/ivis.pdf
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Visualization =
+
+== URL ==
+
+http://www.sci.utah.edu/~miriah/cs6630/old/2013/
+
+== Audience/Pre-requisites ==
+The prerequisites for this class are some linear algebra and calculus, as well as some programming experience. If you are unsure please come talk with me. Having taken CS-5610: Computer Graphics, or its equivalent at another university, is very helpful but not required. Grad students from other departments with the appropriate background are welcome!
+== Description ==
+
+== Objectives ==
+The goal of this course is to develop a broad understanding of the principles, methods, and techniques for designing effective visualizations of data. The course will span a wide range of topics, encompassing foundations for both spatial (eg. gridded data from simulations and measurement devices) and nonspatial data (eg. graphs, text, high-dimensional tabular data), as well as the theory behind vision, color, and visualization design. You will gain experience in using cutting-edge data analysis systems, as well as in developing your own interactive visualization tools.
+
+== Topics ==
+
+* Design principles
+* Design critiques
+* Data types
+* Intro to Tableau
+* Visual encodings
+* Data exploration
+* Perception
+* Color
+* Intro to Processing
+* Time series
+* Views
+* Interaction
+* Tabular dat
+* Filtering & aggregation
+* Parallel coordinates
+* Trees and graphs
+* Maps
+* Scalar fields
+* Isosurfaces
+* Scalar data
+* 3d graphics
+* Volume rendering
+* Transfer function design
+* Vector fields
+* Transfer functions
+* Vector fields
+* Tensor fields
+* Visualization models
+* Design studies
+* Molecular animation
+
+== Textbook ==
+
+* Visualization Design and Analysis: Abstractions, Principles, and Methods (pre-publication draft), Tamara Munzner, AK Peters
+http://www.cs.ubc.ca/~tmm/courses/533-11/book/vispmp-draft.pdf
+
+== References ==
+
+Many.  See url.
+
+Blogs
+
+* ChartsNThings, The NYTimes Graphics Dept http://chartsnthings.tumblr.com/
+* DataBlog, The Guardian Newspaper http://www.guardian.co.uk/news/datablog
+* Fell In Love With Data, Enrico Bertini http://fellinlovewithdata.com/   
+* Visual Business Intelligence, Stephen Few http://www.perceptualedge.com/blog
+* Eager Eyes, Robert Kosara http://eagereyes.org/
+* infovis wiki, Vienna http://www.infovis-wiki.net/
+* infovis.net, Juan C. Durstler http://www.infovis.net/index.php?lang=2	
+* Statistical Graphics, Martin Theus http://www.theusrus.de/blog/
+* Functional Color, Maureen Stone http://www.stonesc.com/wordpress/
+* Well-Formed Data, Moritz Stefaner http://well-formed-data.net/
+* Flowing Data, Nathan Yau http://flowingdata.com/
+* information aesthetics, Andrew Vande Moere http://infosthetics.com/
+* visual complexity, Manuel Lima http://www.visualcomplexity.com/vc/ 
+* Ask ET, Edward Tufte http://www.edwardtufte.com/bboard/q-and-a?topic_id=1
+* Information Wants to be Seen, TJ Jankun-Kelly http://infowantstobeseen.org/
+
+== Lecture Notes ==
+
+Yes.
+
+== Problems ==
+
+Yes.
+
+== Projects ==
+
+Yes.
+
+== Software ==
+
+* Processing.js
+* Tableau
+* D3
+
+= Title =
+
+== URL ==
+
+https://files.nyu.edu/ks123/public/dataviz_sosulski.pdf
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Title =
+
+== URL ==
+
+http://blogs.evergreen.edu/vistas/files/2014/03/genettibaileySciVisCourse.pdf
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Title =
+
+== URL ==
+
+http://www.cs.unc.edu/~taylorr/Comp715/
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Title =
+
+== URL ==
+
+https://www.si.umich.edu/sites/default/files/SI649_syllabus_F12_1.pdf
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Title =
+
+== URL ==
+
+http://www.bu.edu/tech/support/research/training-consulting/online-tutorials/introduction-to-scientific-visualization-tutorial/
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Title =
+
+== URL ==
+
+http://www.ncsu.edu/scivis/
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Title =
+
+== URL ==
+
+http://cs.brown.edu/courses/cs237/
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Visualization for Scientists =
+
+== URL ==
+http://solar.gmu.edu/teaching/2013_CDS301_Spring/index.html and
+
+Observations: Homework problems similar to http://www.cs.sjtu.edu.cn/~shengbin/course/datavis/#home
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+
+= Image-Based Information Visualization for Software Visual Analytics =
+
+== URL ==
+
+http://www.lia.dc.ufscar.br/brava2013/resources/alexandru_telea.pdf
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
+
+= Title =
+
+== URL ==
+
+http://www.csc.kth.se/utbildning/kth/kurser/DH2321/ivis12/
+
+== Audience/Pre-requisites ==
+
+== Description ==
+
+== Objectives ==
+
+== Topics ==
+
+== Textbook ==
+
+== References ==
+
+== Lecture Notes ==
+
+== Problems ==
+
+== Projects ==
+
+== Software ==
