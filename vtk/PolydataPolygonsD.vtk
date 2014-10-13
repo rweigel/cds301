@@ -1,0 +1,20 @@
+# vtk DataFile Version 3.0
+Polydata + Polygons Example C
+ASCII
+
+DATASET POLYDATA
+POINTS 8 float
+0.0 0.0 0.0
+0.0 1.0 0.0
+1.0 1.0 0.0
+1.0 0.0 0.0
+0.0 0.0 1.0
+0.0 1.0 1.0
+1.0 1.0 1.0
+1.0 0.0 1.0
+
+POLYGONS 4 20
+4 0 1 2 3
+4 0 4 5 1
+4 4 5 6 7
+4 6 7 3 2

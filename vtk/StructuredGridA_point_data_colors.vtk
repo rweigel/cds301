@@ -1,0 +1,18 @@
+# vtk DataFile Version 3.0
+Structured Grid Example 1
+ASCII
+DATASET STRUCTURED_GRID
+DIMENSIONS 2 2 1
+POINTS 4 float
+0 0 0
+1 0 0
+0 1 0
+1 1 0
+
+POINT_DATA 4
+SCALARS point_scalars int 1
+LOOKUP_TABLE default
+0
+1
+2
+3
