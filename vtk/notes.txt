@@ -1,22 +1,30 @@
+= About =
 
-ParaView and VTK
+ParaView stands for "Parallel View".  It is a scientific visualization program developed especially for viewing large 3-D scientific data sets.  The primary interface is a GUI, although scripting is possible using Python.
 
-The following set of notes apply to ParaView and VTK.  They were developed based on 
-reading
+In contrast, MATLAB was designed to be used by engineers and their common data types (time series and basic 2-D plots).  Although MATLAB has 3-D capabilities, these capabilities are limited in comparsion to programs like ParaView.
+
+Prior to reading these notes, work through the activities in the [[#ParaView Tutorial]].
+
+= References =
+
+The following set of notes apply to ParaView and VTK.  They were developed based on: 
 
 * File format specification for VTK: [http://www.vtk.org/VTK/img/file-formats.pdf]
 * Visit description of ASCII VTK files: [http://www.visitusers.org/index.php?title=ASCII_VTK_Files]
 * VTK description of Geometry and Topology: [http://www.vtk.org/Wiki/VTK/Tutorials/GeometryTopology]
 * Paraview description of VTK Data Model: [http://www.paraview.org/Wiki/ParaView/Users_Guide/VTK_Data_Model]
 
-= References =
+Other useful links:
 
 * http://www.barre.nom.fr/vtk/links-examples.html
 * http://www.cs.rpi.edu/~cutler/classes/visualization/F10/lectures/10_simplification.pdf
+* http://people.sc.fsu.edu/~jburkardt/data/vtk/vtk.html
+* http://www.gris.uni-tuebingen.de/edu/areas/scivis/volren/datasets/new.html
 
 = Terminology =
 
-The following terms are used in this set of notes.  The usage of these terms in these notes are consistent, but may be inconsistent with definitions used in the references (and in many cases, the references have conflicting or differing definitions).
+The following terms are used in this set of notes.  The usage of these terms in these notes are consistent, but may be inconsistent with definitions used in the [[#References|references]] (and in many cases, the references have conflicting or differing definitions).
 
 * VTK - Visualization Tool Kit; a software library for creating computer graphics.
 * ParaView - An application that uses VTK to allow for display of and interaction with computer graphics.
@@ -26,12 +34,57 @@ The following terms are used in this set of notes.  The usage of these terms in 
 * Dataset attributes - Each part of a dataset (points and cells) may have an associated color, scalar, vector, normal, tensor, texture, and field.
 * Geometry - A list of x, y, and z values.
 * Topology - A description of how a geometry is interconnected to form cells (which may be vertices, lines, surfaces, and volumes)
-* Cell - A basic unit of topology.  
+* Cell - A basic unit of topology.  Points are connected to form cells. 
 * Surface graphics primitives - vertices, lines, polygons, and triangle strips.  Each primitive corresponds to a cell and has a front and back surface.
 * Vertex - A point which has zero or more lines connected to it.
 * Polygon - A set of points connected with lines.
-* Grid
-* Mesh
+* Grid - A set of points
+* Mesh - A set of cells.
+
+= VTK Data Files =
+
+In these notes, VTK data files are used to show how VTK and ParaView work.  The first three lines
+of the data files will always have the form
+
+ # vtk DataFile Version 3.0
+ Descriptive Text
+ ASCII
+
+where <code>Descriptive Text</code> will change depending on the content of the file.  The next two parts of the datafile
+contain a description of a dataset and an optional set of dataset attributes.
+
+As an example, the following file describes the location of two points (the geometry) and how these points are connected (the topology).
+
+The interpretation of <code>POINTS 2 float</code>, <code>LINES 1 3</code>, and <code>2 0 1</code> is:
+
+* <code>POINTS 2 float</code>: Two rows of x,y,z values of points are to follow.  The values should be interpreted as floating point.
+* <code>LINES 1 3</code>: <code>1</code> row of line connections are to follow; each row has <code>3</code> integers.
+* <code>2 0 1</code>: <code>2</code> integers (that refer to points in the point list) are to follow and the first point (identified with <code>0</code>) in the list of points is connected to the second point (identified with <code>1</code>).
+
+ # vtk DataFile Version 3.0
+ A dataset with one line and no attributes
+ ASCII
+
+ DATASET POLYDATA
+ POINTS 2 float
+ 0.0 0.0 0.0
+ 1.0 1.0 0.0
+ LINES 1 3
+ 2 0 1
+
+The following file connects three points
+
+ # vtk DataFile Version 3.0
+ A dataset with two lines and no attributes
+ ASCII
+
+ DATASET POLYDATA
+ POINTS 3 float
+ 0.0 0.0 0.0
+ 1.0 0.0 0.0
+ 1.0 1.0 0.0
+ LINES 1 4
+ 3 0 1 2
 
 = Datasets =
 
@@ -40,9 +93,9 @@ A dataset in VTK has two key components [http://www.vtk.org/Wiki/VTK/Tutorials/G
 # Geometry
 # Topology
 
-Geometry is represented by a list of x,y,z coordinate values (corresponding to point in 3-dimensional space).
+'''Geometry''' is represented by a list of x,y,z coordinate values (corresponding to point in 3-dimensional space).
 
-The way in which a list of coordinates are connected represents its topology.
+The way in which a list of coordinates are connected to form cells represents its '''topology'''.
 
 There are many ways of representing topology in VTK.  A dataset can be specified without topology, but most of the operations on data require a topology to be specified. 
 
@@ -52,13 +105,14 @@ A given geometry may have more than one topological representation.  For example
 * a single continuous line to form a polyline (one cell), and
 * three lines to form a triangle (one cell).
 
-In the case of the polyline, the cell consists of both lines.  If the two connected lines are always going to share the same attributes, they should be connected as a polyline.
+In the case of the polyline, the cell consists of both lines.  If the two connected lines will always share the same attributes, they should be connected as a polyline.
 
-The types of datasets available include
-# Structured points,
-# Rectilinear grid,
-# Structured (Curvilinear) grid, and 
-# Unstructured grid
+The types of datasets include
+
+# [[Structured Points]],
+# [[Rectilinear Grid]],
+# [[Structured (Curvilinear) Grid]], and 
+# [[Unstructured Grid]]
 
 For the first three types of datasets, only a geometry is specified and the topology is inferred.
 
@@ -426,6 +480,7 @@ Note that the number of cells = 5.
 # vtk DataFile Version 3.0
 vtk output
 ASCII
+
 DATASET POLYDATA
 
 POINTS 3 float
@@ -533,3 +588,11 @@ Each part of a dataset (points and cells) may have an associated color lookup ta
 
 
 == CELL_DATA ==
+
+= Activities =
+
+== ParaView Tutorial ==
+
+# Select <code>Application->System Tools->Terminal</code> and type <code>/usr/local/paraview/bin/paraview &</code>
+# Download the tutorial data at http://www.paraview.org/Wiki/images/5/58/ParaViewTutorialData.zip and save on your desktop.  Double-click the zip file and extract to your desktop.  If successful, you should see a blue folder on your desktop with the title <code>ParaViewTutorialData</code>.
+# Work through the activities in chapter 2 of [http://www.paraview.org/Wiki/images/5/5d/ParaViewTutorial41.pdf]
