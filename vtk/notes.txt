@@ -61,30 +61,73 @@ The interpretation of <code>POINTS 2 float</code>, <code>LINES 1 3</code>, and <
 * <code>LINES 1 3</code>: <code>1</code> row of line connections are to follow; each row has <code>3</code> integers.
 * <code>2 0 1</code>: <code>2</code> integers (that refer to points in the point list) are to follow and the first point (identified with <code>0</code>) in the list of points is connected to the second point (identified with <code>1</code>).
 
- # vtk DataFile Version 3.0
- A dataset with one line and no attributes
- ASCII
+(Note that although this is a valid VTK file, when opened in ParaView, one receives the message "A reader could not be found".  The issue appears to be that the dataset is too simple.)
 
- DATASET POLYDATA
- POINTS 2 float
- 0.0 0.0 0.0
- 1.0 1.0 0.0
- LINES 1 3
- 2 0 1
+<pre>
+# vtk DataFile Version 3.0
+A dataset with one line and no attributes
+ASCII
 
-The following file connects three points
+DATASET POLYDATA
+POINTS 2 float
+0.0 0.0 0.0
+1.0 1.0 0.0
+LINES 1 3
+2 0 1
+</pre>
 
- # vtk DataFile Version 3.0
- A dataset with two lines and no attributes
- ASCII
+The following file connects three points with a single line and can be read by ParaView:
 
- DATASET POLYDATA
- POINTS 3 float
- 0.0 0.0 0.0
- 1.0 0.0 0.0
- 1.0 1.0 0.0
- LINES 1 4
- 3 0 1 2
+<pre>
+# vtk DataFile Version 3.0
+A dataset with two lines and no attributes
+ASCII
+
+DATASET POLYDATA
+POINTS 3 float
+0.0 0.0 0.0
+1.0 0.0 0.0
+1.0 1.0 0.0
+LINES 1 4
+3 0 1 2
+</pre>
+
+The three points can be connected with two individual lines using
+
+<pre>
+# vtk DataFile Version 3.0
+A dataset with two lines and no attributes
+ASCII
+
+DATASET POLYDATA
+POINTS 3 float
+0.0 0.0 0.0
+1.0 0.0 0.0
+1.0 1.0 0.0
+LINES 2 6
+2 0 1
+2 1 2
+</pre>
+
+The wireframe image will look the same but the Information tab will note that there are two cells instead of one as in the previous example.
+
+In the following, the lines are connected
+<pre>
+# vtk DataFile Version 3.0
+A dataset with two lines and no attributes
+ASCII
+
+DATASET POLYDATA
+POINTS 3 float
+0.0 0.0 0.0
+1.0 0.0 0.0
+1.0 1.0 0.0
+LINES 2 6
+2 0 1
+2 1 2
+</pre>
+
+
 
 = Datasets =
 
@@ -109,10 +152,10 @@ In the case of the polyline, the cell consists of both lines.  If the two connec
 
 The types of datasets include
 
-# [[Structured Points]],
-# [[Rectilinear Grid]],
-# [[Structured (Curvilinear) Grid]], and 
-# [[Unstructured Grid]]
+# [[#Structured Points]],
+# [[#Rectilinear Grid]],
+# [[#Structured (Curvilinear) Grid]], and 
+# [[#Unstructured Grid]]
 
 For the first three types of datasets, only a geometry is specified and the topology is inferred.
 
@@ -124,10 +167,12 @@ Structured points have a constant spacing in each spatial direction.  The number
 
 The number of points in each direction, nx, ny, and nz must be greater than or equal to 1 and each of their spacings sx, sy, and sz must be greater than 0.
 
- DATASET STRUCTURED_POINTS
- DIMENSIONS nx ny nz
- ORIGIN x y z
- SPACING sx sy sz
+<pre>
+DATASET STRUCTURED_POINTS
+DIMENSIONS nx ny nz
+ORIGIN x y z
+SPACING sx sy sz
+</pre>
 
 The following file corresponds to points with a separation of 1.0 in the x-direction, 2.0 in the y-direction, and 4.0 in the z-direction.
 
@@ -139,7 +184,7 @@ In this example, only geometry is specified, but VTK infers the topology.  To se
 # vtk DataFile Version 3.0
 Structured Points Example
 ASCII
-
+ 
 DATASET STRUCTURED_POINTS
 DIMENSIONS 2 4 8
 ORIGIN 0.0 0.0 0.0
@@ -170,6 +215,8 @@ Note that in the Information tab of ParaView, the number of cells is given as 5.
 
 [[Image:StructuredPointsC.png|400px|thumb|left]]
 
+<br style="clear:both"/>
+
 == Rectilinear Grid ==
 
 A rectilinear grid is a dataset with
@@ -181,14 +228,16 @@ Regular topology mean that each cell has the same type (rectangle).
 
 The geometry for each direction is specified with a list of monotonically increasing values.  A semi-regular geometry is one in which the spacing of the points in the direction of each axis is uniform, but the spacing is not the same for all three directions.
 
- DATASET RECTILINEAR_GRID
- DIMENSIONS nx ny nz 
- X_COORDINATES nx dataType
- x0 x1 ... x(nx-1)
- Y_COORDINATES ny dataType
- y0 y1 ... y(ny-1)
- Z_COORDINATES nz dataType
- z0 z1 ... z(nz-1)
+<pre>
+DATASET RECTILINEAR_GRID
+DIMENSIONS nx ny nz 
+X_COORDINATES nx dataType
+x0 x1 ... x(nx-1)
+Y_COORDINATES ny dataType
+y0 y1 ... y(ny-1)
+Z_COORDINATES nz dataType
+z0 z1 ... z(nz-1)
+</pre>
 
 A rectilinear grid such as Figure 3.5 defines its topology implicitly and point coordinates semi-implicitly. To fully define the mesh for a rectilinear grid, VTK uses the following:
 
@@ -223,6 +272,7 @@ Z_COORDINATES 1 float
 
 [[Image:RectilinearGridA.png|400px|thumb|left|Wireframe view of [[:Media:RectilinearGridA.vtk|RectilinearGridA.vtk]]]]
 
+<br style="clear:both"/><br style="clear:both"/>
 <pre>
 # vtk DataFile Version 3.0
 Rectilinear Grid Example B
@@ -249,13 +299,13 @@ Create a VTK file that, when loaded in ParaView and viewed as a wireframe, resul
 Note that if you have an error in your VTK file, ParaView may crash or show an error message (which is usually not helpful in identifying the problem).
 
 [[Image:RectilinearGridC.png|400px|thumb|left]]
-
+<br style="clear:both"/>
 ==== Rectilinear Grid II ====
 
 Create a VTK file that, when loaded in ParaView and viewed as a wireframe, results in the image shown below.
 
 [[Image:RectilinearGridD.png|400px|thumb|left]]
-
+<br style="clear:both"/>
 == Structured (Curvilinear) Grid ==
 
 The file format supports 1D, 2D, and 3D structured grid datasets. The dimensions nx, ny, nz must be greater than or
@@ -270,13 +320,15 @@ The coordinate of each point is defined as follows: coordinate = coordinate_arra
 
 A curvilinear grid consists of cells of the same type. This type is determined by the dimensionality of the dataset (based on the extents) and can either be vertex (0D), line (1D), quad (2D) or hexahedron (3D).
 
- DATASET STRUCTURED_GRID
- DIMENSIONS nx ny nz
- POINTS n dataType
- p0x p0y p0z
- p1x p1y p1z
- ...
- p(n-1)x p(n-1)y p(n-1)z
+<pre>
+DATASET STRUCTURED_GRID
+DIMENSIONS nx ny nz
+POINTS n dataType
+p0x p0y p0z
+p1x p1y p1z
+...
+p(n-1)x p(n-1)y p(n-1)z
+</pre>
 
 Note that the order in which the points are specified matters.  VTK uses the point ordering to infer the topology.
 
@@ -295,6 +347,8 @@ POINTS 4 float
 
 [[Image:CurvilinearGridA.png|400px|thumb|left]]
 
+<br style="clear:both"/>
+
 Note that in this example, the surface color is black and coloring by cell normals does not work.  In this example, the cell created is not valid.
 
 <pre>
@@ -312,6 +366,8 @@ POINTS 4 float
 </pre>
 
 [[Image:CurvilinearGridB.png|400px|thumb|left]]
+
+<br style="clear:both"/>
 
 A structured grid may have a non-rectilinear shape.  For example [http://www.paraview.org/Wiki/File:ParaView_UG_Curvilinear.png]
 
@@ -332,6 +388,7 @@ POINTS 6 float
 
 [[Image:CurvilinearGridC.png|400px|thumb|left]]
 
+<br style="clear:both"/>
 == Polygonal Data ==
 
 The polygonal dataset consists of arbitrary combinations of surface graphics primitives vertices (and polyvertices), lines (and polylines), polygons (of various types), and triangle strips. Polygonal data is defined by the POINTS VERTICES, LINES, POLYGONS, or TRIANGLE_STRIPS sections. The POINTS definition is the same as we saw for structured grid datasets. The VERTICES, LINES, POLYGONS, or TRIANGLE_STRIPS keywords define the polygonal dataset topology. Each of these keywords requires two parameters: the number of cells n and the size of the cell list size. The cell list size is the total number of integer values required to represent the list (i.e., sum of numPoints and connectivity indices over each cell). None of the keywords VERTICES, LINES, POLYGONS, or TRIANGLE_STRIPS is required.
@@ -342,25 +399,24 @@ http://www.paraview.org/Wiki/File:ParaView_UG_Polydata.png
 
 === Polydata + Polygons ===
 
- DATASET POLYDATA POINTS n dataType 
- p0x p0y p0z
- p1x p1y p1z
- ...
- p(n-1)x p(n-1)y p(n-1)z
+<pre>
+DATASET POLYDATA POINTS n dataType 
+p0x p0y p0z
+p1x p1y p1z
+...
+p(n-1)x p(n-1)y p(n-1)z
 
- POLYGONS n size
- numPoints0, i0, j0, k0, ...
- numPoints1, i1, j1, k1, ...
- ...
- numPointsn-1, in-1, jn-1, kn-1, ...
+POLYGONS n size
+numPoints0, i0, j0, k0, ...
+numPoints1, i1, j1, k1, ...
+...
+numPointsn-1, in-1, jn-1, kn-1, ...
 
 Note that in the following example, if the POLOYGONS section was omitted, no wireframe or points can be drawn when the file is opened in ParaView.
 
 The interpretation of the file is that there are four points (specified by x,y, and z values), and the values should be interpreted as floating point.
 
-The line <code>4 0 1 2 3</code> means that each polygon is bounded by vertices.  The
-first vertex is labeled 0 and corresponds to the first point in the list of points.  The second
-vertex is labeled 1 and corresponds to the second point in the list of points, etc.
+The line <code>4 0 1 2 3</code> means that each polygon is bounded by vertices.  The first vertex is labeled 0 and corresponds to the first point in the list of points.  The second vertex is labeled 1 and corresponds to the second point in the list of points, etc.
 
 The polygon is drawn by connecting a line from point 0 (0.0, 0.0, 0.0) to point 1 (0.0, 1.0, 0.0) to point 2 (1.0, 1.0, 0.0) to point 3 (1.0, 0.0, 0.0).
 
@@ -383,6 +439,7 @@ POLYGONS 1 5
 In the following example, the first polygon is created using the first four points as in the previous example.
 
 The second polygon is drawn by connecting point 0 (0.0, 0.0, 0.0) to point 4 (0.0, 0.0, 1.0) to point 5 (0.0, 1.0, 1.0) to point 1 (0.0, 1.0, 0.0).
+
 <pre>
 # vtk DataFile Version 3.0
 Polydata + Polygons Example B
@@ -403,17 +460,19 @@ POLYGONS 2 10
 
 === Points + Vertices ===
 
- DATASET POLYDATA POINTS n dataType 
- p0x p0y p0z
- p1x p1y p1z
- ...
- p(n-1)x p(n-1)y p(n-1)z
-
- VERTICES n size
- numPoints0, i0, j0, k0, ...
- numPoints1, i1, j1, k1, ...
- ...
- numPointsn-1, in-1, jn-1, kn-1, ...
+<pre>
+DATASET POLYDATA POINTS n dataType 
+p0x p0y p0z
+p1x p1y p1z
+...
+p(n-1)x p(n-1)y p(n-1)z
+ 
+VERTICES n size
+numPoints0, i0, j0, k0, ...
+numPoints1, i1, j1, k1, ...
+...
+numPointsn-1, in-1, jn-1, kn-1, ...
+</pre>
 
 Note that when this file is viewed in ParaView, the Wireframe and Surface With Edges options do not work.
 
@@ -438,17 +497,19 @@ VERTICES 3 6
 
 === Points + Lines ===
 
- DATASET POLYDATA POINTS n dataType 
- p0x p0y p0z
- p1x p1y p1z
- ...
- p(n-1)x p(n-1)y p(n-1)z
+<pre>
+DATASET POLYDATA POINTS n dataType 
+p0x p0y p0z
+p1x p1y p1z
+...
+p(n-1)x p(n-1)y p(n-1)z
 
- LINES n size
- numPoints0, i0, j0, k0, ...
- numPoints1, i1, j1, k1, ...
- ...
- numPointsn-1, in-1, jn-1, kn-1, ...
+LINES n size
+numPoints0, i0, j0, k0, ...
+numPoints1, i1, j1, k1, ...
+...
+numPointsn-1, in-1, jn-1, kn-1, ...
+</pre>
 
 Note that the number of cells = 2.  In this case a cell is a line.
 
@@ -500,17 +561,18 @@ VERTICES 3 6
 
 === Points + Triangle Strips ===
 
- DATASET POLYDATA POINTS n dataType 
- p0x p0y p0z
- p1x p1y p1z
- ...
- p(n-1)x p(n-1)y p(n-1)z
+<pre>
+DATASET POLYDATA POINTS n dataType 
+p0x p0y p0z
+p1x p1y p1z
+...
+p(n-1)x p(n-1)y p(n-1)z
 
- TRIANGLE_STRIPS n size
- numPoints0, i0, j0, k0, ...
- numPoints1, i1, j1, k1, ...
- ...
- numPointsn-1, in-1, jn-1, kn-1, ...
+TRIANGLE_STRIPS n size
+numPoints0, i0, j0, k0, ...
+numPoints1, i1, j1, k1, ...
+...
+numPointsn-1, in-1, jn-1, kn-1, ...
 
 == Unstructured Grid ==
 
