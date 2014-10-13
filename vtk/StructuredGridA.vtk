@@ -1,6 +1,7 @@
 # vtk DataFile Version 3.0
-Structured Grid Example 1
+Structured Grid Example A
 ASCII
+
 DATASET STRUCTURED_GRID
 DIMENSIONS 2 2 1
 POINTS 4 float
