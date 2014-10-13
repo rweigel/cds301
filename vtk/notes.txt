@@ -1,11 +1,11 @@
-'''Example'''
-{|style="border-top:1px solid black" cellpadding="2" width="100%" align="left"
-|-
-|style="vertical-align:top" width="50%" |
-
-|style="vertical-align:top"|
-<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/|width=400px|display=none|expire=1</imgc>
-|}
+http://people.sc.fsu.edu/~jburkardt/data/vtk/vtk.html
+http://www.rug.nl/science-and-society/centre-for-information-technology/research/hpcv/visualisation/vtk/datasets/man.html
+http://www.bu.edu/tech/files/power-point/VizWorkshopFall08-vtk.ppt
+http://daac.hpc.mil/gettingStarted/Introduction_to_Scientific_Visualization.html
+http://www.sci.utah.edu/~cscheid/fal05/scivis/project1/
+http://www.ci-ra.org/Documents/Seminaires/05-2009/ParaView.DataFormats_Types.pdf
+https://www.cac.cornell.edu/education/Training/Data12/Introduction%20to%20Scientific%20Visualization.pdf
+http://www.evl.uic.edu/aej/524/
 
 '''Example'''
 {|style="border-top:1px solid black" cellpadding="2" width="100%" align="left"
@@ -13,31 +13,31 @@
 |style="vertical-align:top" width="50%" |
 <pre>
 # vtk DataFile Version 3.0
-Dataset attribute example
+Polydata + Polygons Example B with Cell Data
 ASCII
-DATASET STRUCTURED_GRID
-DIMENSIONS 2 2 1
-POINTS 4 float
-0 0 0
-1 0 0
-0 1 0
-1 1 0
 
-POINT_DATA 4
-SCALARS point_scalars int 1
+DATASET POLYDATA
+POINTS 6 float
+0.0 0.0 0.0
+0.0 1.0 0.0
+1.0 1.0 0.0
+1.0 0.0 0.0
+0.0 0.0 1.0
+0.0 1.0 1.0
+
+POLYGONS 2 10
+4 0 1 2 3
+4 0 4 5 1
+
+CELL_DATA 2
+SCALARS cell_scalars int 1
 LOOKUP_TABLE default
-0
-0
-3
-3
-<pre>
-
-The second image was created by selecting a representation of "Points", <code>Filters->Alphabetical->Glyphs</code>, Glyph Type of Sphere, and a scale mode of scalar.  This scales the glyphs at each point according to their relative size.  In addition, the spheres should be color-coded and a colorbar should indicate the mapping from color to scalar value.
-
+1
+2
+</pre>
 |style="vertical-align:top"|
-<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/StructuredGridA_point_data_scalar_default.png|width=400px|display=none|expire=1</imgc>
-
-<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/StructuredGridA_point_data_scalar_default_glyphs.png|width=400px|display=none|expire=1</imgc>
-
+<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/PolydataPolygonsB_cell_data_scalar_default.png|width=400px|display=none|expire=1</imgc>
 |}
+
+
 

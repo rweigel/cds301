@@ -12,7 +12,7 @@ POINTS 4 float
 POINT_DATA 4
 SCALARS point_scalars int 1
 LOOKUP_TABLE default
-1
-1
+0
+0
 3
 3
