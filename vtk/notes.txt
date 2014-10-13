@@ -7,37 +7,17 @@ http://www.ci-ra.org/Documents/Seminaires/05-2009/ParaView.DataFormats_Types.pdf
 https://www.cac.cornell.edu/education/Training/Data12/Introduction%20to%20Scientific%20Visualization.pdf
 http://www.evl.uic.edu/aej/524/
 
+
 '''Example'''
 {|style="border-top:1px solid black" cellpadding="2" width="100%" align="left"
 |-
 |style="vertical-align:top" width="50%" |
+
 <pre>
-# vtk DataFile Version 3.0
-Polydata + Polygons Example B with Cell Data
-ASCII
-
-DATASET POLYDATA
-POINTS 6 float
-0.0 0.0 0.0
-0.0 1.0 0.0
-1.0 1.0 0.0
-1.0 0.0 0.0
-0.0 0.0 1.0
-0.0 1.0 1.0
-
-POLYGONS 2 10
-4 0 1 2 3
-4 0 4 5 1
-
-CELL_DATA 2
-SCALARS cell_scalars int 1
-LOOKUP_TABLE default
-1
-2
 </pre>
+
 |style="vertical-align:top"|
-<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/PolydataPolygonsB_cell_data_scalar_default.png|width=400px|display=none|expire=1</imgc>
+<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/PolydataPolygonsB_cell_data_point_data_scalar_default_view_1.png|width=400px|display=none|expire=1</imgc>
+
+<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/PolydataPolygonsB_cell_data_point_data_scalar_default_view_2.png|width=400px|display=none|expire=1</imgc>
 |}
-
-
-
