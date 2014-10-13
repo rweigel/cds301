@@ -1,3 +1,11 @@
+{| border="0" cellpadding="2" width="100%" align="left"
+|-
+|style="vertical-align:top" width="50%" |
+
+|style="vertical-align:top"|
+
+|}
+
 = About =
 
 ParaView stands for "Parallel View".  It is a scientific visualization program developed especially for viewing large 3-D scientific data sets.  The primary interface is a GUI, although scripting is possible using Python.
@@ -61,8 +69,9 @@ The interpretation of <code>POINTS 2 float</code>, <code>LINES 1 3</code>, and <
 * <code>LINES 1 3</code>: <code>1</code> row of line connections are to follow; each row has <code>3</code> integers.
 * <code>2 0 1</code>: <code>2</code> integers (that refer to points in the point list) are to follow and the first point (identified with <code>0</code>) in the list of points is connected to the second point (identified with <code>1</code>).
 
-(Note that although this is a valid VTK file, when opened in ParaView, one receives the message "A reader could not be found".  The issue appears to be that the dataset is too simple.)
-
+{| border="0" cellpadding="2" width="100%" align="left"
+|-
+|style="vertical-align:top" width="50%" |
 <pre>
 # vtk DataFile Version 3.0
 A dataset with one line and no attributes
@@ -75,9 +84,13 @@ POINTS 2 float
 LINES 1 3
 2 0 1
 </pre>
+|style="vertical-align:top"|
+Note that although this is a valid VTK file, when opened in ParaView, one receives the message "A reader could not be found".  The issue appears to be that the dataset is too simple.
+|}
 
-The following file connects three points with a single line and can be read by ParaView:
-
+{| border="0" cellpadding="2" width="100%" align="left"
+|-
+|style="vertical-align:top" width="50%" |
 <pre>
 # vtk DataFile Version 3.0
 A dataset with two lines and no attributes
@@ -91,9 +104,14 @@ POINTS 3 float
 LINES 1 4
 3 0 1 2
 </pre>
+This file connects three points with a single line and can be read by ParaView.
+|style="vertical-align:top"|
+<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/LinesA.png|width=400px|display=none|expire=1</imgc>
+|}
 
-The three points can be connected with two individual lines using
-
+{| border="0" cellpadding="2" width="100%" align="left"
+|-
+|style="vertical-align:top" width="50%" |
 <pre>
 # vtk DataFile Version 3.0
 A dataset with two lines and no attributes
@@ -108,10 +126,16 @@ LINES 2 6
 2 0 1
 2 1 2
 </pre>
+The three points can be connected with two individual lines using the following file.
 
-The wireframe image will look the same but the Information tab will note that there are two cells instead of one as in the previous example.
+The wireframe image looks the same as the previous example, but the Information tab will note that there are two cells instead of one as in the previous example.
+|style="vertical-align:top"|
+<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/LinesB.png|width=400px|display=none|expire=1</imgc>
+|}
 
-In the following, the lines are connected
+{| border="0" cellpadding="2" width="100%" align="left"
+|-
+|style="vertical-align:top" width="50%" |
 <pre>
 # vtk DataFile Version 3.0
 A dataset with two lines and no attributes
@@ -126,8 +150,10 @@ LINES 2 6
 2 0 1
 2 1 2
 </pre>
-
-
+In the above file, the lines are connected in a different way.
+|style="vertical-align:top"|
+<imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/LinesC.png|width=400px|display=none|expire=1</imgc>
+|}
 
 = Datasets =
 
