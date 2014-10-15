@@ -1,0 +1,24 @@
+# vtk DataFile Version 3.0
+Dataset attribute example
+ASCII
+DATASET STRUCTURED_GRID
+DIMENSIONS 2 2 1
+POINTS 4 float
+0 0 0
+1 0 0
+0 1 0
+1 1 0
+
+POINT_DATA 4
+SCALARS point_scalars int 1
+LOOKUP_TABLE my_table
+0
+0
+1
+1
+
+LOOKUP_TABLE my_table 4
+1.0 0.0 0.0 1.0
+1.0 0.0 0.0 1.0
+0.0 0.0 1.0 1.0
+0.0 0.0 1.0 1.0
