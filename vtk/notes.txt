@@ -1,23 +1,24 @@
-http://people.sc.fsu.edu/~jburkardt/data/vtk/vtk.html
-http://www.rug.nl/science-and-society/centre-for-information-technology/research/hpcv/visualisation/vtk/datasets/man.html
-http://www.bu.edu/tech/files/power-point/VizWorkshopFall08-vtk.ppt
-http://daac.hpc.mil/gettingStarted/Introduction_to_Scientific_Visualization.html
-http://www.sci.utah.edu/~cscheid/fal05/scivis/project1/
-http://www.ci-ra.org/Documents/Seminaires/05-2009/ParaView.DataFormats_Types.pdf
-https://www.cac.cornell.edu/education/Training/Data12/Introduction%20to%20Scientific%20Visualization.pdf
-http://www.evl.uic.edu/aej/524/
-
-
 '''Example'''
 {|style="border-top:1px solid black" cellpadding="2" width="100%" align="left"
 |-
 |style="vertical-align:top" width="50%" |
 
+Create a VTK file containing both POINT_DATA and CELL_DATA.  When coloring by <code>point_scalars</code> is selected in ParaView, the first image should appear (after rotating the image).  When coloring by <code>cell_scalars</code> is selected, the second image should appear (after rotating the image).
+{| class="wikitable collapsible collapsed"
+! align="left" |&nbsp;Answer
+|-
+|
 <pre>
+To appear here
 </pre>
+|}
 
 |style="vertical-align:top"|
+
+point_scalars selected
 <imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/PolydataPolygonsB_cell_data_point_data_scalar_default_view_1.png|width=400px|display=none|expire=1</imgc>
 
+cell_scalars selected
 <imgc>url=https://raw.githubusercontent.com/rweigel/cds301/master/vtk/PolydataPolygonsB_cell_data_point_data_scalar_default_view_2.png|width=400px|display=none|expire=1</imgc>
+
 |}
