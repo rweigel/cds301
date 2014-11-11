@@ -1,11 +1,26 @@
 # vtk DataFile Version 3.0
-A dataset with two lines and no attributes
+Dataset attribute example
 ASCII
+DATASET STRUCTURED_GRID
+DIMENSIONS 2 2 2
+POINTS 8 float
+0 0 0
+1 0 0
+0 1 0
+1 1 0
+0 0 1
+1 0 1
+0 1 1
+1 1 1
 
-DATASET POLYDATA
-POINTS 3 float
-0.0 0.0 0.0
-1.0 0.0 0.0
-1.0 1.0 0.0
-LINES 1 4
-3 0 1 2
+POINT_DATA 8
+SCALARS point_scalars int 1
+LOOKUP_TABLE default
+1
+1
+3
+3
+1
+1
+3
+3
