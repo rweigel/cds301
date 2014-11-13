@@ -4,7 +4,7 @@ for i = 1:10
         X(i,j) = j;
         Y(i,j) = i;
         U(i,j) = 1.0;
-        V(i,j) = 1.0+j/2;
+        V(i,j) = 1.0+i/2;
     end
 end
 
