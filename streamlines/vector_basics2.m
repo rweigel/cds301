@@ -33,32 +33,5 @@ set(gca,'YTick',[1:1:10])
 grid on;
 set(gca,'FontSize',16)
 
-
-% Add index axes.
-% Based on technique from http://stackoverflow.com/questions/19569134/overlaying-two-axes-in-a-matlab-plot
-% Create a new axes in the same position as the first one, overlaid on top
-h2 = axes('position', get(gca, 'position')); 
-% Put the new axes' y labels on the right, set the x limits the same as the
-% original axes', and make the background transparent
-set(h2, 'YAxisLocation', 'right', 'YLim',[0,11],'Xlim', [0,11], 'Color', 'none'); 
-ylabel(h2, 'j','Rotation',0,'FontSize',16);
-xlabel(h2, 'i','FontSize',16);
-set(h2,'XTick',[1:10])
-set(h2,'YTick',[1:10])
-set(h2, 'XAxisLocation', 'top');
-axis square;
-hold on;
-set(gca,'FontSize',16)
-
 print -depsc vector_basics2_quiver.eps
-print -dpng vecgtor_basics2_quiver.png
-
-figure(2);clf
-contourf(X,Y,V);
-hc = colorbar;
-xlabel('x');
-ylabel('y');
-set(get(hc,'Title'),'String','v_y')
-
-print -depsc vector_basics2_contour.eps
-print -dpng vecgtor_basics2_contour.png
+print -dpng vector_basics2_quiver.png
