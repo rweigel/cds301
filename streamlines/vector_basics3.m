@@ -35,5 +35,5 @@ plot(px,py,'g','LineWidth',3);
 plot(px,py,'k.','MarkerSize',10);
 plot(px(1),py(1),'kx','MarkerSize',15);
 
-print -depsc vector_basics2contour.eps
-print -dpng vector_basics2contour.png
+print -depsc vector_basics3contour.eps
+print -dpng vector_basics3contour.png
