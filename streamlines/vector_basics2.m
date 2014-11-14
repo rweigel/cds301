@@ -33,5 +33,5 @@ set(gca,'YTick',[1:1:10])
 grid on;
 set(gca,'FontSize',16)
 
-print -depsc vector_basics2_quiver.eps
-print -dpng vector_basics2_quiver.png
+print -depsc vector_basics2quiver.eps
+print -dpng vector_basics2quiver.png
