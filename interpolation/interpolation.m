@@ -80,6 +80,8 @@ plot3([0 0],[0.75 0.75],[0 0.875],'g-');
 plot3([0 1],[0.75 0.75],[0 0],'g-');
 plot3([0],[0.75],[0.875],'g.','MarkerSize',30);
 plot3(0.25,0.75,0,'kx');
+print -dpng interpolation4.png
+print -depsc interpolation4.eps
 
 figure(5);clf;hold on;
 x = [0 1 1 0];
@@ -107,4 +109,6 @@ plot3([1 0],[0.75 0.75],[0.5+1/8,0.875],'k-')
 plot3(0.25,0.75,0,'kx');
 plot3(0.25,0.75,0.6125+.1969,'r.','MarkerSize',30)
 plot3([0.25,0.25],[0.75,0.75],[0,0.6125+.1969],'r-')
+print -dpng interpolation5.png
+print -depsc interpolation5.eps
 
