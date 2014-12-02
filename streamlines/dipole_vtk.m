@@ -1,4 +1,4 @@
-clear
+clear;
 fid = fopen('dipole_vtk.vtk','w');
 fprintf(fid,'# vtk DataFile Version 3.0\n');
 fprintf(fid,'Dipole Field\n');
