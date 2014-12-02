@@ -1,7 +1,8 @@
 
 fid = fopen('NuGen.txt','r');
 s = 1; % Number of somas
-a = 1; % Numbe of axons
+a = 1; % Number of axons
+d = 1; % Number of dendrites
 while 1
     line = fgetl(fid);
     if ~ischar(line)
