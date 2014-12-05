@@ -92,7 +92,7 @@ grid on;
 for i = 0:5
     I = find(b(:,3) > -1 & b(:,4) == i); % Remove empties
     mean(b(I,3));
-    fprintf('Mean of Entrance for Q26 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+    fprintf('Mean (std/sqrt(N)) of Entrance for Q26 answer of %d = %.1f (%.1f) (N=%d)\n',i,mean(b(I,3)),std(b(I,3))/sqrt(length(I)),length(I));
 end
 
 fprintf('\n');
@@ -100,7 +100,7 @@ fprintf('\n');
 for i = 0:5
     I = find(b(:,3) > -1 & b(:,5) == i); % Remove empties
     mean(b(I,3));
-    fprintf('Mean of Entrance for Q27 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+    fprintf('Mean (std/sqrt(N)) of Entrance for Q27 answer of %d = %.1f (%.1f) (N=%d)\n',i,mean(b(I,3)),std(b(I,3))/sqrt(length(I)),length(I));
 end
 
 fprintf('\n');
@@ -108,7 +108,7 @@ fprintf('\n');
 for i = 0:5
     I = find(b(:,3) > -1 & b(:,6) == i); % Remove empties
     mean(b(I,3));
-    fprintf('Mean of Entrance for Q28 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+    fprintf('Mean (std/sqrt(N)) of Entrance for Q28 answer of %d = %.1f (%.1f) (N=%d)\n',i,mean(b(I,3)),std(b(I,3))/sqrt(length(I)),length(I));
 end
 
 fprintf('\n');
@@ -116,7 +116,7 @@ fprintf('\n');
 for i = 0:5
     I = find(b(:,3) > -1 & b(:,7) == i); % Remove empties
     mean(b(I,3));
-    fprintf('Mean of Entrance for Q29 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+    fprintf('Mean (std/sqrt(N)) of Entrance for Q29 answer of %d = %.1f (%.1f) (N=%d)\n',i,mean(b(I,3)),std(b(I,3))/sqrt(length(I)),length(I));
 end
 
 fprintf('\n');
@@ -124,5 +124,5 @@ fprintf('\n');
 for i = 0:5
     I = find(b(:,3) > -1 & b(:,8) == i); % Remove empties
     mean(b(I,3));
-    fprintf('Mean of Entrance for Q30 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+    fprintf('Mean/std of Entrance for Q30 answer of %d = %.1f/%.1f (N=%d)\n',i,mean(b(I,3)),std(b(I,3))/sqrt(length(I)),length(I));
 end
