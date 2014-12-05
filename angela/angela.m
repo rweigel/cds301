@@ -63,6 +63,7 @@ I = find(b(:,2) == 206);
 b(I,17)
 
 I = find(b(:,3) > -1 & b(:,9) > -1); % Remove empties
+figure(1);
 plot(b(I,3),b(I,9),'.','MarkerSize',30);
 xlabel('Entrance Score');
 ylabel('Exit Score');
@@ -70,4 +71,58 @@ tmp = corrcoef(b(:,3),b(:,9));
 title(sprintf('cc = %.2f',tmp(2)));
 grid on;
 
+I = find(b(:,3) > -1 & b(:,17) > -1); % Remove empties
+figure(2);
+plot(b(I,3),b(I,17)/100,'.','MarkerSize',30);
+xlabel('Entrance Score');
+ylabel('Final Grade [GPA]');
+tmp = corrcoef(b(:,3),b(:,17));
+title(sprintf('cc = %.2f',tmp(2)));
+grid on;
 
+I = find(b(:,9) > -1 & b(:,17) > -1); % Remove empties
+figure(3);
+plot(b(I,9),b(I,17)/100,'.','MarkerSize',30);
+xlabel('Exit Score');
+ylabel('Final Grade [GPA]');
+tmp = corrcoef(b(:,9),b(:,17));
+title(sprintf('cc = %.2f',tmp(2)));
+grid on;
+
+for i = 0:5
+    I = find(b(:,3) > -1 & b(:,4) == i); % Remove empties
+    mean(b(I,3));
+    fprintf('Mean of Entrance for Q26 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+end
+
+fprintf('\n');
+
+for i = 0:5
+    I = find(b(:,3) > -1 & b(:,5) == i); % Remove empties
+    mean(b(I,3));
+    fprintf('Mean of Entrance for Q27 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+end
+
+fprintf('\n');
+
+for i = 0:5
+    I = find(b(:,3) > -1 & b(:,6) == i); % Remove empties
+    mean(b(I,3));
+    fprintf('Mean of Entrance for Q28 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+end
+
+fprintf('\n');
+
+for i = 0:5
+    I = find(b(:,3) > -1 & b(:,7) == i); % Remove empties
+    mean(b(I,3));
+    fprintf('Mean of Entrance for Q28 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+end
+
+fprintf('\n');
+
+for i = 0:5
+    I = find(b(:,3) > -1 & b(:,8) == i); % Remove empties
+    mean(b(I,3));
+    fprintf('Mean of Entrance for Q28 answer of %d = %.1f (N=%d)\n',i,mean(b(I,3)),length(I));
+end
