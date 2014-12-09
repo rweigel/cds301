@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 clear; clc;
+
+shownumbers = 0;
 
 x = [0:20:100];
 y = [0:20:100];
-
-
-for i = 1:length(x)
-    for j = 1:length(y)
-        z(i,j) = (x(i)-50)^2 + (y(j)-50)^2;
-    end
-end
 
 z = z/1000;
 figure(1);clf;
@@ -18,22 +12,14 @@ hold on;
 
 for i = 1:length(x)
     for j = 1:length(y)
-        plot(x(i),y(j),'k.','MarkerSize',20);
-        text(2+x(i),2+y(j),num2str(z(i,j)));
-=======
-clear;
-x = [0:20:100];
-y = [0:20:100];
-
-for i = 1:length(x)
-    for j = 1:length(y)
-        z(i,j) = (x(i)-50)^2 + (y(j)-50)^2;
->>>>>>> FETCH_HEAD
+      plot(x(i),y(j),'k.','MarkerSize',20);
+      if (shownumbers)
+	text(2+x(i),2+y(j),num2str(z(i,j)));
+      end
     end
 end
 z = z/1000;
 
-<<<<<<< HEAD
 axis square;
 xlabel('x');
 ylabel('y');
