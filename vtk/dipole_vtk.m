@@ -16,8 +16,6 @@ fprintf(fid,'SPACING 1.0 1.0 1.0\n');
 fprintf(fid,'POINT_DATA %d\n',length(x)*length(y)*length(z));
 fprintf(fid,'VECTORS MagneticField float\n');
 
-
-
 l = 1;
 for k = 1:length(z)
     for j = 1:length(y)
