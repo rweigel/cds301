@@ -1,4 +1,4 @@
-function md ( nd, np, step_num, dt )
+function md ( nd, np, step_num, dt, fname )
 
 %*****************************************************************************80
 %
@@ -116,7 +116,9 @@ function md ( nd, np, step_num, dt )
 
   tic;
 
-fid = fopen('md_output_positions2.txt','w')
+if nargin == 5
+  fid = fopen(fname,'w');
+end
 
   for step = 0 : step_num
 
@@ -132,9 +134,11 @@ fid = fopen('md_output_positions2.txt','w')
       e0 = potential + kinetic;
     end
 
-   fprintf(fid,'%d ',step);
-   fprintf(fid,'%f ',pos(:,1:2));
-   fprintf(fid,'\n');
+    if nargin == 5
+      fprintf(fid,'%d ',step);
+      fprintf(fid,'%f ',pos);
+      fprintf(fid,'\n');
+    end
 
     if ( step == step_print )
       rel = ( potential + kinetic - e0 ) / e0;
@@ -144,7 +148,11 @@ fid = fopen('md_output_positions2.txt','w')
     end
 
   end
-    fclose(fid)
+
+if nargin == 5
+  fclose(fid);
+end
+
 %
 %  Report timing.
 %

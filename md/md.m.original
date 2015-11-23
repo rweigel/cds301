@@ -116,8 +116,6 @@ function md ( nd, np, step_num, dt )
 
   tic;
 
-fid = fopen('md_output_positions.txt','w')
-
   for step = 0 : step_num
 
     if ( step == 0 )
@@ -132,14 +130,6 @@ fid = fopen('md_output_positions.txt','w')
       e0 = potential + kinetic;
     end
 
-
-    if (nd == 3)
-      fprintf(fid,'%d %f %f %f\n',step,pos(1,1),pos(2,1),pos(3,1));
-    end
-    if (nd == 2)
-      fprintf(fid,'%d %f %f\n',step,pos(1,1),pos(2,1));
-    end
-
     if ( step == step_print )
       rel = ( potential + kinetic - e0 ) / e0;
       fprintf ( 1, '  %8d  %14f  %14f  %14e\n', step, potential, kinetic, rel );
@@ -148,7 +138,6 @@ fid = fopen('md_output_positions.txt','w')
     end
 
   end
-    fclose(fid)
 %
 %  Report timing.
 %
