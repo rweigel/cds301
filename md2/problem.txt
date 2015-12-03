@@ -1,0 +1,22 @@
+The file [http://mag.gmu.edu/git-data/cds301/md/particles3.txt] contains measurements of the position and velocity of three particles as a function of time (in seconds).  Each row in the file contains columns of
+
+ t, x1, y1, vx1, vy1, x2, y2, vx2, vy2, x3, y3, vx3, vy3
+
+where the numbers 1, 2, 3 correspond to the particle number, x and y are the horizontal and vertical positions of the particle (in meters), and vx and vy are the horizontal and vertical velocities of the particle (in meters/second).  This data file can be downloaded and saved to your computer and then loaded into a matrix in MATLAB using
+
+ urlwrite('http://mag.gmu.edu/git-data/cds301/md/particles3.txt','particles3.txt')
+ load particles3.dat
+
+# Create a plot of the y values of all three particles as a function of time for t < 2.0.  When I execute your program in MATLAB, I should see a figure that I can look at and easily determine the approximate positions of each particle at any time instant.  That is, by looking at your plot, I should be able to say something like "the position of particle 1 is between 0.9 and 1.0 at time = some value, the position of particle 2 is between ...".
+# Create a plot of the vy values of all three particles as a function of time for t < 2.0.  When I execute your program in MATLAB, I should  see a figure that I can look at and easily determine the approximate values of vy of each particle at any time instant.
+# Create a plot that shows the position of the particles at the first time instant.  The particles should be represented by colored circles.
+# Create a sequence of plots that shows the position of each particle at each time instant.  When I execute your code in MATLAB, I should see a figure with three dots that continuously change position.
+# Suppose you showed the sequence of plots and the reader requested that you modify it so that they could easily tell the relative amount of kinetic energy that each particle had. Design and implement a visualization that allows the reader to easily determine the relative amount of kinetic energy that each particle has.  (The kinetic energy of each particle is the sum of the squares of its velocities.) 
+
+To turn in this problem, either:
+* Save your code in a file named <code>Final.m</code>.  When I execute this program, I should see five figure windows pop up, or
+* Save your code in files named <code>Final1.m</code>, <code>Final2.m</code>, ..., <code>Final5.m</code>.  When I execute each of the programs, a single figure window should pop up.
+
+Extra credit:
+
+Write a program that creates a data file named <code>particles3interpolated.txt</code> that contains estimates of the particles positions and velocities at time values of <code>0.00, 0.01, 0.02, ..., 10.0</code>.  The columns labels should be the same as <code>particles3.txt</code>.

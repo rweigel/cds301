@@ -71,7 +71,7 @@
 </head>
 
 <body>
-<textarea style="width:100%" id="data"></textarea>
+<textarea style="width:100%;height:10em" id="data"></textarea>
 
 <!-- Here's the HTML to create the canvas, text, and GUI controls... -->
 
@@ -661,20 +661,24 @@ information about the world, if just a little imagination and thinking are appli
 	}
 
 	// Execute a single time step (Verlet algorithm):
+	var part = ""
 	function doStep() {
 		var dt = Number(dtSlider.value);
 		var halfdt = 0.5 * dt;
 		var halfdtsquared = halfdt * dt;
-		var part = ""
+
+		var line = ""
 		for (var i=0; i<N; i++) {
 			x[i] += vx[i]*dt + ax[i]*halfdtsquared;
 			y[i] += vy[i]*dt + ay[i]*halfdtsquared;
 			vx[i] += ax[i]*halfdt;
 			vy[i] += ay[i]*halfdt;
-			part += x[i].toExponential(1) + " " + y[i].toExponential(1) + " " + vx[i].toExponential(1) + " " + vy[i].toExponential(1) + " "
+			line += x[i].toPrecision(3) + " " + y[i].toPrecision(3) + " " + vx[i].toPrecision(3) + " " + vy[i].toPrecision(3) + " "
 		}
-
-		document.getElementById('data').value = document.getElementById('data').value + part + "\n"
+		part += time.toPrecision(3) + " " + line + "\n"
+		if (time > 40 && time - dt < 40) {
+			document.getElementById('data').value = part
+		}
 
 		computeAccelerations();
 		for (var i=0; i<N; i++) {
