@@ -18,10 +18,22 @@ figure(1);clf
 
 %1. 
 I = find(particles3(:,1) < 2);
+t = t(I);
+y = y(I,:);
+
+% or
+if (0)
+    for i = 1:size(particles3,1)
+        t(i) = particles3(i,1);
+        y(i,1) = particles3(i,3);
+        y(i,2) = particles3(i,7);
+        y(i,3) = particles3(i,10);
+    end
+end
 
 figure(1);clf
     % Make line width 2 so easier to see.
-    plot(t(I),y(I,:))
+    plot(t,y)
     legend('Particle 1','Particle 2','Particle 3',...
         'Location','SouthWest');
     % Show grid to make easy to read.
@@ -29,7 +41,7 @@ figure(1);clf
     print -dpng final1.png
     
 figure(2);clf
-    plot(t(I),y(I,:),'LineWidth',2);
+    plot(t,y,'LineWidth',2);
     % Add space before 1st character.
     legend(' Particle 1',' Particle 2',' Particle 3',...
         'Location','SouthWest');
@@ -38,7 +50,7 @@ figure(2);clf
     print -dpng final2.png
 
 figure(3);clf
-    plot(t(I),y(I,:),'LineWidth',2);
+    plot(t,y,'LineWidth',2);
     % Add space before 1st character.
     legend(' Particle 1',' Particle 2',' Particle 3',...
         'Location','SouthWest');
@@ -50,7 +62,7 @@ figure(3);clf
 
 figure(4);clf
     % Make line width 2 so easier to see.
-    plot(t(I),y(I,:),'LineWidth',2,'Color','Blue');
+    plot(t,y,'LineWidth',2,'Color','Blue');
     hold on;
     set(gca,'FontSize',16)
     ylabel('[m]','FontSize',16);
@@ -64,10 +76,10 @@ figure(4);clf
 
 figure(5);clf
     % Default line colors did not match text color specs.
-    plot(t(I),y(I,1),'LineWidth',2,'Color','Blue');
+    plot(t,y,'LineWidth',2,'Color','Blue');
     hold on;
-    plot(t(I),y(I,2),'LineWidth',2,'Color','Green');
-    plot(t(I),y(I,3),'LineWidth',2,'Color','Red');
+    plot(t,y,'LineWidth',2,'Color','Green');
+    plot(t,y,'LineWidth',2,'Color','Red');
     set(gca,'FontSize',16)
     ylabel('[m]','FontSize',16); % Show units!
     xlabel('[sec]','FontSize',16); % Show units!
@@ -77,5 +89,3 @@ figure(5);clf
     grid on;
     title('Particle y-values')
     print -dpng final5.png
-    
-    
