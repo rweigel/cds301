@@ -31,6 +31,7 @@ if (0)
     end
 end
 
+if (0)
 figure(1);clf
     % Make line width 2 so easier to see.
     plot(t,y)
@@ -62,7 +63,7 @@ figure(3);clf
 
 figure(4);clf
     % Make line width 2 so easier to see.
-    plot(t,y,'LineWidth',2,'Color','Blue');
+    plot(t,y,'LineWidth',2);
     hold on;
     set(gca,'FontSize',16)
     ylabel('[m]','FontSize',16);
@@ -76,16 +77,59 @@ figure(4);clf
 
 figure(5);clf
     % Default line colors did not match text color specs.
-    plot(t,y,'LineWidth',2,'Color','Blue');
+    plot(t,y(:,1),'LineWidth',2,'Color','Blue');
     hold on;
-    plot(t,y,'LineWidth',2,'Color','Green');
-    plot(t,y,'LineWidth',2,'Color','Red');
+    plot(t,y(:,2),'LineWidth',2,'Color','Green');
+    plot(t,y(:,3),'LineWidth',2,'Color','Red');
     set(gca,'FontSize',16)
     ylabel('[m]','FontSize',16); % Show units!
     xlabel('[sec]','FontSize',16); % Show units!
-    text(1.7,2.5,'Particle 1','Color','Blue','FontSize',16,'FontWeight','Bold');
+    %text(1.7,2.5,'Particle 1','Color','Blue','FontSize',16,'FontWeight','Bold');
+    text(1.6,2.5,'Particle 1','Color','Blue','FontSize',16,'FontWeight','Bold');
     text(1.1,3.2,'Particle 2','Color','Green','FontSize',16,'FontWeight','Bold');
     text(1.105,2.7,'Particle 3','Color','Red','FontSize',16,'FontWeight','Bold');
     grid on;
     title('Particle y-values')
     print -dpng final5.png
+    
+figure(6);clf
+    % Default line colors did not match text color specs.
+    plot(t,y(:,1),'LineWidth',2,'Color','Blue');
+    hold on;
+    plot(t,y(:,2),'LineWidth',2,'Color','Green');
+    plot(t,y(:,3),'LineWidth',2,'Color','Red');
+    set(gca,'FontSize',16)
+    yl = ylabel('y [m]','FontSize',16); % Show units!
+    xlabel('time [sec]','FontSize',16); % Show units!
+    %text(1.7,2.5,'Particle 1','Color','Blue','FontSize',16,'FontWeight','Bold');
+    text(1.6,2.5,'Particle 1','Color','Blue','FontSize',16,'FontWeight','Bold');
+    text(1.1,3.2,'Particle 2','Color','Green','FontSize',16,'FontWeight','Bold');
+    text(1.105,2.7,'Particle 3','Color','Red','FontSize',16,'FontWeight','Bold');
+    th = title('Source: http://mag.gmu.edu/git-data/cds301/md2/data/particles3.txt');
+    set(th,'FontSize',12,'FontWeight','Normal')
+    grid on;
+    set(th,'FontSize',12)
+    set(gca,'XTick',[0:0.2:2])
+    print -dpng final6.png
+end
+    
+figure(7);clf
+    % Default line colors did not match text color specs.
+    plot(t,y(:,1)-mean(y(:,1)),'LineWidth',2,'Color','Blue','Marker','.','MarkerFaceColor','k','MarkerEdgeColor','k');
+    hold on;
+    plot(t,y(:,2)-mean(y(:,2)),'LineWidth',2,'Color','Green','Marker','.','MarkerFaceColor','k','MarkerEdgeColor','k');
+    plot(t,y(:,3)-mean(y(:,3)),'LineWidth',2,'Color','Red','Marker','.','MarkerFaceColor','k','MarkerEdgeColor','k');
+    yl = ylabel('y - ave(y) [m]','FontSize',16); % Show units!
+    ylabel('y-$\bar{\mbox{y}}$ [m]','Interpreter','latex','FontSize',16)
+    xlabel('time [sec]','FontSize',16,'Interpreter','latex'); % Show units!
+    %text(1.7,2.5,'Particle 1','Color','Blue','FontSize',16,'FontWeight','Bold');
+    text(0.8,0.05,'Particle 1','Color','Blue','FontSize',16,'FontWeight','Bold','Interpreter','latex','VerticalAlignment','bottom');
+    text(0.6,-0.2,'Particle 2','Color','Green','FontSize',16,'FontWeight','Bold','Interpreter','latex','VerticalAlignment','bottom');
+    text(1.2,0.2,'Particle 3','Color','Red','FontSize',16,'FontWeight','Bold','Interpreter','latex','VerticalAlignment','bottom');
+    th = title('Source: http://mag.gmu.edu/git-data/cds301/md2/data/particles3.txt');
+    set(th,'FontSize',12,'FontWeight','Normal')
+    grid on;
+    set(gca,'TickLabelInterpreter','latex','FontSize',16)
+    set(th,'FontSize',12,'Interpreter','latex')
+    set(gca,'XTick',[0:0.2:2])
+    print -dpng final7.png        
