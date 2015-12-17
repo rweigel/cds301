@@ -1,0 +1,20 @@
+In the following diagram, the pixels centered on <code>(x,y)</code> values of <code>(-1.0,0.0)</code>, <code>(-1.0,-0.5)</code>, <code>(-0.5, 0.0)</code>, and <code>(-0.5, 1)</code> were colored either white or black by iterating the equation
+
+ z(n) = z(n-1)*z(n-1) + x + y*sqrt(-1)
+
+for values of <code>n = 2, 3, ..., 5000</code>.  If <code>abs(z(n)*z(n)) > 2</code>, for any <code>n</code> value less than or equal to <code>5000</code>, the pixel is colored black.  Otherwise the pixel is colored red.
+
+For example, the for point at <code>(x,y) = (-1.0,0.5)</code>, the first six values of z are
+
+ z(1) = +0.00+0.00j, |z(1)| = 0.00
+ z(2) = -1.00+0.50j, |z(2)| = 1.12
+ z(3) = -0.25-0.50j, |z(3)| = 0.56
+ z(4) = -1.19+0.75j, |z(4)| = 1.40
+ z(5) = -0.15-1.28j, |z(5)| = 1.29
+ z(6) = -2.62+0.89j, |z(6)| = 2.77
+
+An so the pixel at <code>(x,y) = (-1.0,0.5)</code> was colored black because at <code>n = 6</code>, <code>abs(z(6)) = 2.77 > 2</code>.
+
+THe point at <code>(x,y) = (-0.5,0.0)</code>, was colored white because the 5000th value of <code>z</code> is
+ z(5000) = -0.37+0.00j, |z(5000)| = 0.37
+and no other values of <code>z</code> were found such that <code>abs(z(n)) > 2</code>.
